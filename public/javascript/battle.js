@@ -1,10 +1,20 @@
-//Check for higher attack level, then attack, then check for death
-
+//Listen for start battle action 
+//Battle Sequence:
+// Load character object from DB
+// Check for higher attack rating/ determineAttacker
+// Alternate attacks and check for health
+// If player dies - end Game
+// If enemy dies - award gold
+// Check to see if player wants to upgrade?
+// Next monster
+// End after set number of monsters or keep going until player dies?
+ 
 
 let enemyAttackFirst = false;
 
-const loadEnemy = () => {
-    //need to do - randomly select enemy or treasure
+const loadCharacter = async () => {
+    await //load character from db
+    //select from enemy array
     determineAttacker(enemy)
 }
 
@@ -23,6 +33,6 @@ const battle = (player, enemy) => {
 }
 
 const endBattle = () => {
-    //check for last enemy - i.e. loop through 10 enemies?
     //award treasure
+    //check for last enemy - i.e. loop through 10 enemies?
 }
