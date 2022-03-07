@@ -2,10 +2,10 @@ const { Monsters } = require('../models');
 
 const monstersdata = [
     {
-    name: 'Puny Pendax',
-    hp: 20,
-    attack: 2,
-    reward: 5,
+        name: 'Puny Pendax',
+        hp: 20,
+        attack: 2,
+        reward: 5,
 
     },
     {
