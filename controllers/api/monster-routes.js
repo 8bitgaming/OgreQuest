@@ -1,18 +1,18 @@
 const router = require('express').Router();
-const { Monsters } = require('../../models');
+const { Monster } = require('../../models');
 
 router.get('/:id', (req, res) => {
-    Monsters.findOne({
+    Monster.findOne({
         where: {
             id: req.params.id
         },
-        include: [
-            {
-                model: Monsters
-            }
-        ]
+        // include: [
+        //     {
+        //         model: Monsters
+        //     }
+        // ]
     })
-        .then(userData => res.json(userData))
+        .then(monsterData => res.json(monsterData))
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
