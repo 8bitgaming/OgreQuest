@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 
 class Characters extends Model { }
 
+// to create character user would input name
 Characters.init(
     {
         id: {
@@ -33,15 +34,15 @@ Characters.init(
             allowNull: false,
         },
 
-        // user_id : {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'user',
-        //         key: 'id'
-        //     }
-        // }
-
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'characters'
     }
+
 );
 
 module.exports = Characters;
