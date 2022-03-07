@@ -30,16 +30,6 @@ User.init(
             validate: {
                 len: [4]
             }
-        },
-        characters_id: {
-            type: DataTypes.INTEGER,
-            // allowNull set to true since creating an account you wont have a character yet, 
-            // we can use a update route to add/remove created characters to the user 
-            allowNull: true,
-            references: {
-                model: 'characters',
-                key: 'id'
-            }
         }
     },
     {
@@ -51,4 +41,4 @@ User.init(
     }
 );
 
-module.exports = Characters;
+module.exports = User;
