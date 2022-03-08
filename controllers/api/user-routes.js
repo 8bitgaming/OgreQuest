@@ -64,7 +64,7 @@ router.post('/logout', (req, res) => {
     else {
         res.status(404).end();
     }
-
+});
 // Find all users
 router.get('/', (req, res) => {
     User.findAll({
