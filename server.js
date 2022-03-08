@@ -9,6 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({  });
 
+//setup session so that password can be confirmed
 const sess = {
     secret: process.env.SESSION_PW,
     cookie: {},
@@ -29,7 +30,7 @@ app.use(routes);
 
 
 // sync sequelize models to the database, then turn on the server
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`App listening on port http://localhost:${PORT}`));
 });
 
