@@ -10,6 +10,5 @@ Characters.belongsTo(User, {
     onDelete: 'set Null'
 });
 
-
-
 module.exports = { User, Characters, Monster }
+
