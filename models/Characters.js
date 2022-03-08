@@ -21,18 +21,28 @@ Characters.init(
         hp: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 20
 
         },
 
         attack: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 10
         },
 
         gold: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 50
         },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
+        }
 
     },
     {
