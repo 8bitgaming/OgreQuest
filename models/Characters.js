@@ -10,9 +10,8 @@ Characters.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            AutoIncrement: true,
+            autoIncrement: true
         },
-
         name: {
             type: DataTypes.STRING,
             allowNull: false,
