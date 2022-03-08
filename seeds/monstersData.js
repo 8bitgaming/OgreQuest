@@ -1,4 +1,4 @@
-const { Monsters } = require('../models');
+const { Monster } = require('../models');
 
 const monstersdata = [
     {
@@ -39,7 +39,7 @@ const monstersdata = [
     },
 ];
 
-const seedMonsters = () => Monsters.bulkCreate(monstersdata);
+const seedMonsters = () => Monster.bulkCreate(monstersdata);
 
 seedMonsters();
 //module.exports = seedMonsters;
