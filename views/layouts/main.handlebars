@@ -6,20 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ogre Quest</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
+
 </head>
 
 <body>
+
     <div class="wrapper">
         <header>
             <h1>
                 <a href="/">Ogre Quest</a>
             </h1>
-<nav>
+            <nav>
+                {{#if loggedIn}}
+                <a href="/">Home Page</a>
+                <button id="logout">Log Out</button>
+                {{else}}
+                <a href="/login">Login</a>
+                {{/if}}
+            </nav>
+            
+{{!-- <nav>
     <a href="/login">login</a>
-</nav>
+</nav> --}}
 
         </header>
         <main>
+                <template name="backgroundImage">
+            <style>
+    body {
+        background-image: url('../utils/img/OgreQuestImg.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+    </template>
             {{{ body }}}
         </main>
         <footer>
