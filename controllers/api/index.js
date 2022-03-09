@@ -5,8 +5,7 @@ const characterRoutes = require('./character-routes');
 
 // user route
 router.use('/users', userRoutes);
-router.use('/character', characterRoutes);
-
-router.use('/monster', monsterRoutes);
+router.use('/characters', characterRoutes);
+router.use('/monsters', monsterRoutes);
 
 module.exports = router;
