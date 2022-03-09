@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ogre Quest</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
+
 </head>
 
 <body>
+
     <div class="wrapper">
         <header>
             <h1>
@@ -22,12 +24,23 @@
                 <a href="/login">Login</a>
                 {{/if}}
             </nav>
+            
 {{!-- <nav>
     <a href="/login">login</a>
 </nav> --}}
 
         </header>
         <main>
+                <template name="backgroundImage">
+            <style>
+    body {
+        background-image: url('../utils/img/OgreQuestImg.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+    </template>
             {{{ body }}}
         </main>
         <footer>
