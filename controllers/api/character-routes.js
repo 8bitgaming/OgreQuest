@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Characters } = require('../../models');
+const { Character } = require('../../models');
 
 
 //to create a character
 router.post('/', (req, res) => {
     // expects {name: "Lernantino" user_id: "1"}
-    Characters.create({
+    Character.create({
         name: req.body.name,
         user_id: req.body.user_id
     })
@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
 
 // Find all characters
 router.get('/', (req, res) => {
-    Characters.findAll()
+    Character.findAll()
         .then(CharacterData => res.json(CharacterData))
         .catch(err => {
             console.log(err);
@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
 });
 // find one character
 router.get('/:id', (req, res) => {
-    Characters.findOne({
+    Character.findOne({
         where: {
             id: req.params.id
         }
@@ -49,7 +49,7 @@ router.put('/:id', (req, res) => {
     "gold": "20
     }
 */
-    Characters.update(
+    Character.update(
         {
             name: req.body.name,
             hp: req.body.hp,
@@ -77,7 +77,7 @@ router.put('/:id', (req, res) => {
 // delete character
 router.delete('/:id', (req, res) => {
     // delete a user by its `id` value
-    Characters.destroy({
+    Character.destroy({
         where: {
             id: req.params.id
         }

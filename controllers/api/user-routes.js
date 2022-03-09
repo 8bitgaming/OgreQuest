@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Characters } = require('../../models');
+const { User, Character } = require('../../models');
 
 //start of log in work
 //to create a user
@@ -69,7 +69,7 @@ router.get('/', (req, res) => {
     User.findAll({
         include: [
             {
-                model: Characters
+                model: Character
             }
         ]
     })
@@ -88,7 +88,7 @@ router.get('/:id', (req, res) => {
         },
         include: [
             {
-                model: Characters
+                model: Character
             }
         ]
     })
