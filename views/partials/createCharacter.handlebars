@@ -1,0 +1,20 @@
+<form class="character-form">
+    <div>
+        <label for="character-name">Enter Character name:</label>
+        <input type="text" id="character-name" user= {{user_id}}/>
+    </div>
+    <div>
+        <p>Please select your difficulty:</p>
+          <label for="easy">Easy</label>
+          <input type="radio" id="easy" name="difficulty" value="easy"><br>
+          <label for="medium">Medium</label>
+          <input type="radio" id="medium" name="difficulty" value="medium"><br>
+          <label for="hard">Hard</label>
+          <input type="radio" id="hard" name="difficulty" value="hard"><br>
+    </div>
+    <div>
+        <button type="submit">Create Character</button>
+    </div>
+</form>
+
+<script src="/javascript/character.js"></script>
