@@ -85,6 +85,10 @@ form label {
 .headerimg {
   width: 50%;
 }
+.character-form {
+  z-index: 1;
+  position: absolute;
+}
 
 
 
