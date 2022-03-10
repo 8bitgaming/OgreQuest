@@ -24,4 +24,12 @@ router.get('/character', (req, res) => {
     res.render('character');
 })
 
+
+
+router.get('/battlepage', (req, res) => {
+    res.render('battlepage' , { layout: 'battle' });
+})
+
+
+
 module.exports = router;
