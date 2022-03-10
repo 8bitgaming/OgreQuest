@@ -18,29 +18,15 @@
             <div class = "titleimg">
             <img src="/img/titleimg.png" class ="headerimg">
             </div>
-            {{!-- <h1>
-                <a href="/">Ogre Quest</a>
-            </h1>
-            <nav>
-                {{#if loggedIn}}
-                <a href="/">Home Page</a>
-                <button id="logout">Log Out</button>
-                {{else}}
-                <a href="/login">Login</a>
-                {{/if}}
-            </nav> --}}
-            
-{{!-- <nav>
-    <a href="/login">login</a>
-</nav> --}}
-{{!-- </div> --}}
+
         </header>
+
         <main>
             <body>
                 
                 <div class = "w3-container w3-display-bottommiddle w3-mobile loginimg">
                   <div class = "w3-container w3-mobile w3-padding-large w3-display-middle">
-                      <form class="login-form">
+                      {{!-- <form class="login-form">
                         <div>
                             <label for="email-login">email:</label>
                             <input type="text" id="email-login" />
@@ -65,17 +51,11 @@
                         <div>
                             <button type="submit">signup</button>
                         </div>
-                        </form>
+                        </form> --}}
+                        {{> login }}
                   
                   </div>
-            {{!-- <nav>
-                {{#if loggedIn}}
-                <a href="/">Home Page</a>
-                <button id="logout">Log Out</button>
-                {{else}}
-                <a href="/login">Login</a>
-                {{/if}}
-            </nav> --}}
+
                 </div>
             </body>
 
@@ -84,7 +64,9 @@
         </main>
         <footer></footer>
     </div>
-
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
