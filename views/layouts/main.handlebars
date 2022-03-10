@@ -6,46 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ogre Quest</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
 </head>
 
 <body>
+    <div class = "w3-mobile mainbodyimg"></div>
 
-    <div class="wrapper">
+    {{!-- <div class="wrapper"> --}}
         <header>
-            <h1>
-                <a href="/">Ogre Quest</a>
-            </h1>
-            <nav>
-                {{#if loggedIn}}
-                <a href="/">Home Page</a>
-                <button id="logout">Log Out</button>
-                {{else}}
-                <a href="/login">Login</a>
-                {{/if}}
-            </nav>
-
-            {{!-- <nav>
-                <a href="/login">login</a>
-            </nav> --}}
+            <div class = "titleimg">
+            <img src="/img/titleimg.png" class ="headerimg">
+            </div>
 
         </header>
+
         <main>
-            {{!-- <template name="backgroundImage">
-                <style>
-                    body {
-                        background-image: url('../utils/img/OgreQuestImg.jpg');
-                        background-repeat: no-repeat;
-                        background-attachment: fixed;
-                        background-size: 100% 100%;
-                    }
-                </style>
-            </template> --}}
-            {{{ body }}}
+            <body>
+                
+                <div class = "w3-container w3-display-bottommiddle w3-mobile loginimg">
+                  <div class = "w3-container w3-mobile w3-padding-large w3-display-middle">
+
+                        {{> login }}
+                  
+                  </div>
+
+                </div>
+            </body>
+
+           
+
         </main>
-        <footer>
-            Thanks for visiting!
-        </footer>
+        <footer></footer>
     </div>
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
