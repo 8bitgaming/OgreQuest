@@ -21,7 +21,19 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/character', (req, res) => {
-    res.render('character');
+    User.findAll()
+        .then(dbPostData => {
+            if (!dbPostData) {
+                res.status(404).json({ message: 'No post found with this id' });
+                return;
+            }
+
+
+            res.render('character', {
+                dbPostData,
+                user_id: req.session.user_id
+            });
+        })
 })
 
 module.exports = router;
