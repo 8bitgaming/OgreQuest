@@ -9,7 +9,7 @@ router.post('/', (req, res) => {
         name: req.body.name,
         user_id: req.body.user_id,
         gold: req.body.gold
-        })
+    })
         .then(CharacterData => res.json(CharacterData))
         .catch(err => {
             console.log(err);
