@@ -7,13 +7,17 @@
     <title>Ogre Quest</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+    
 </head>
 
 <body>
+    <div class = "w3-mobile mainbodyimg"></div>
 
-    <div class="wrapper">
+    {{!-- <div class="wrapper"> --}}
         <header>
+            <div class = "titleimg">
+            <img src="/img/titleimg.png" class ="headerimg">
+            </div>
             {{!-- <h1>
                 <a href="/">Ogre Quest</a>
             </h1>
@@ -29,27 +33,56 @@
 {{!-- <nav>
     <a href="/login">login</a>
 </nav> --}}
-
+{{!-- </div> --}}
         </header>
         <main>
             <body>
-            <nav>
+                
+                <div class = "w3-container w3-display-bottommiddle w3-mobile loginimg">
+                  <div class = "w3-container w3-mobile w3-padding-large w3-display-middle">
+                      <form class="login-form">
+                        <div>
+                            <label for="email-login">email:</label>
+                            <input type="text" id="email-login" />
+                        </div>
+                        <div>
+                            <label for="password-login">password:</label>
+                            <input type="password" id="password-login" />
+                        </div>
+                        <div>
+                            <button type="submit">login</button>
+                        </div>
+                        </form>
+                        <form class="signup-form">
+                        <div>
+                            <label for="email-signup">email:</label>
+                            <input type="text" id="email-signup" />
+                        </div>
+                        <div>
+                            <label for="password-signup">password:</label>
+                            <input type="password" id="password-signup" />
+                        </div>
+                        <div>
+                            <button type="submit">signup</button>
+                        </div>
+                        </form>
+                  
+                  </div>
+            {{!-- <nav>
                 {{#if loggedIn}}
                 <a href="/">Home Page</a>
                 <button id="logout">Log Out</button>
                 {{else}}
                 <a href="/login">Login</a>
                 {{/if}}
-            </nav>
-
+            </nav> --}}
+                </div>
             </body>
 
-            {{{ body }}}
+           
 
         </main>
-        <footer>
-            Thanks for visiting!
-        </footer>
+        <footer></footer>
     </div>
 
 </body>

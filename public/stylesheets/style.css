@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+/* #header {
+  text-align: center;
+} */
+
 body, html {
   height: 100%;
   padding: 0;
@@ -12,7 +16,7 @@ body, html {
 button {
   background-color: #225ca3;
   border: 0;
-padding: 10px;
+  padding: 10px;
   color: white;
   font-weight: bold;
   transition: background-color .1s;
@@ -34,7 +38,7 @@ textarea, input {
 
 textarea:focus, input:focus {
   outline: none;
-  border: 1px solid #3486eb;
+  /* border: 1px solid #3486eb; */
 }
 
 textarea {
@@ -50,14 +54,37 @@ form label {
   display: block;
 }
 
-.bodydiv {
-  background-image: url("/img/OgreQuestImg.jpg");
+.mainbodyimg {
+  background-image: url("/img/goblincave.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
 }
+.loginimg {
+  background-image: url("/img/loginbanner.png");
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  width: 75%;
+  height: 50%;
+  z-index: 1;
+  position: absolute;
+  background-position: bottom;
+}
+.titleimg {
+  width:100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.headerimg {
+  width: 50%;
+}
+
 
 
