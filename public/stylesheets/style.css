@@ -97,7 +97,11 @@ form label {
   z-index: 1;
   position: absolute;
 }
-
+.w3-button {
+  
+  /* width:150px; */
+margin: 5px;
+}
 
 
 .battlebackground{
