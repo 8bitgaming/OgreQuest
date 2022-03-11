@@ -90,4 +90,12 @@ router.get('/character/:id', (req, res) => {
         })
 });
 
+
+
+router.get('/battlepage', (req, res) => {
+    res.render('battlepage' , { layout: 'battle' });
+})
+
+
+
 module.exports = router;
