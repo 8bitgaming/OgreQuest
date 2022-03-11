@@ -7,7 +7,8 @@ router.post('/', (req, res) => {
     // expects {name: "Lernantino" user_id: "1"}
     Character.create({
         name: req.body.name,
-        user_id: req.body.user_id
+        user_id: req.body.user_id,
+        gold: req.body.gold
     })
         .then(CharacterData => res.json(CharacterData))
         .catch(err => {
@@ -51,7 +52,6 @@ router.put('/:id', (req, res) => {
 */
     Character.update(
         {
-            name: req.body.name,
             hp: req.body.hp,
             attack: req.body.attack,
             gold: req.body.gold
