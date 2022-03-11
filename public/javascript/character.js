@@ -7,55 +7,43 @@ async function characterFormHandler(event) {
     const userID = document.querySelector('#character-name').getAttribute('user');
     const goldValue = document.querySelector("input[name='difficulty']:checked").value
    
-    // const user_id = session.user_id;
-    // console.log(session.value);
-    // const expr = 'difficultValue';
-    if(goldValue && character_name){
+
+    if(character_name){
         switch (goldValue) {
             case 'easy':
                 var difficultValue = 50;
-                console.log('easy');
                 break;
             case 'medium':
                 var difficultValue = 25;
-                console.log('medium');
                 break;
             case 'hard':
                 var difficultValue = 10;
-                console.log('hard');
                 break;
         }
-
-    }
-
-
-    if (character_name) {
         const response = await fetch('/api/characters', {
             method: 'POST',
             body: JSON.stringify({
                 name: character_name,
                 user_id: parseInt(userID),
-                gold: difficultValue
+                gold: difficultValue,
             }),
             headers: {
                 'Content-Type': 'application/json'
             }
         });
-
+    
         if (response.ok) {
-            // document.location.reload();
-            console.log("user id", parseInt(userID));
-            console.log(difficultValue)
-
+            document.location.reload();
+    
         } else {
             alert(response.statusText);
         }
-
+    
         console.log("characters: ", character_name);
         // console.log(user_id);
     }
-    else {
-        console.log("enter a character name")
+    else { 
+        console.log("A character name is needed")
     }
 }
 
