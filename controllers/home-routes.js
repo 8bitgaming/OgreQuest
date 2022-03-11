@@ -4,23 +4,33 @@ const { Character, User, Monsters } = require('../models');
 
 
 router.get('/', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/character');
+        return;
+    }
     res.render('homepage', {
         userId: req.session.user_id,
         loggedIn: req.session.loggedIn
     });
 });
 
+// There is no log in page this is no longer neeeded
 
-router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
+// router.get('/login', (req, res) => {
+//     if (req.session.loggedIn) {
+//         res.redirect('/character');
+//         return;
+//     }
+//     res.render('login');
+
+// });
+
+router.get('/character', (req, res) => {
+    if (!req.session.loggedIn) {
         res.redirect('/');
         return;
     }
-    res.render('login');
 
-});
-
-router.get('/character', (req, res) => {
     // finds one user
     User.findOne({
         where: {
