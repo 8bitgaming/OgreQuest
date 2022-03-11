@@ -1,0 +1,11 @@
+<div class="get-characters w3-container">
+    <h3>{{email}} created characters:</h3>
+    
+  {{#each this.characters }}
+  <section class="character">
+    <div class="meta">
+      {{name}} with {{gold}}
+    </div>
+  </section>
+  {{/each}}
+</div>

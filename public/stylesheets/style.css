@@ -90,5 +90,10 @@ form label {
   position: absolute;
 }
 
+.get-characters {
+  z-index: 1;
+  position: absolute;
+}
+
 
 
