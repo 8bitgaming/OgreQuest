@@ -52,7 +52,6 @@ router.put('/:id', (req, res) => {
 */
     Character.update(
         {
-            name: req.body.name,
             hp: req.body.hp,
             attack: req.body.attack,
             gold: req.body.gold
