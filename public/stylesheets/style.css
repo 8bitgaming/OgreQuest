@@ -1,19 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
-/* #header {
-  text-align: center;
-} */
-
-body, html {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
-  color: #333;
-
-}
 body {
   background-image: url("/img/goblincave.jpg");
   background-position: center center;
@@ -45,7 +35,6 @@ textarea, input {
 
 textarea:focus, input:focus {
   outline: none;
-  /* border: 1px solid #3486eb; */
 }
 
 textarea {
@@ -53,23 +42,26 @@ textarea {
   min-height: 100px;
 }
 
-/* form > div {
-  margin-bottom: 2%;
-} */
-
 form label {
   display: block;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33%;
+    width: 100%;
 }
 
 .loginimg {
   background-image: url("../img/loginbanner.png");
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  background-size: cover;
+  /* background-size: cover; */
   height: 200px;
   width: 1200px;
-  position: absolute;
-  z-index: 1;
+  /* position: fixed; */
+  align-content: center;
 }
 .titleimg {
   width:100%;
@@ -80,7 +72,8 @@ form label {
   
 }
 .headerimg {
-  width: 50%;
+  width: 100%;
+  position: fixed;
 }
 .character-form {
   background-image: url("/img/loginbanner.png");
@@ -98,5 +91,44 @@ form label {
   position: absolute;
 }
 
+.login-form {
+  background-image: url("/img/loginbanner.png");
+  background-repeat: no-repeat;
+  background-position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* position: fixed; */
+  align-items: center;
+  /* top: 50%;
+  right: 25%; */
+  width: 600px;
+  height: 475px;
+  margin: 75% auto auto;
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(40,185,65,.2));
+  font-size: 100px;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
 
 
