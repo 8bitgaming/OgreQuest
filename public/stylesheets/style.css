@@ -93,5 +93,10 @@ form label {
   text-align: center;
 }
 
+.get-characters {
+  z-index: 1;
+  position: absolute;
+}
+
 
 
