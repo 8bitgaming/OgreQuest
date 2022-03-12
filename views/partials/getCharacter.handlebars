@@ -4,8 +4,11 @@
   {{#each this.characters }}
   <section class="character">
     <div class="meta">
-      {{name}} with {{gold}}
+      {{name}} with {{gold}} gold and {{attack}} attack
+      <button class="delete-character" charId="{{id}}" userID="{{id}}">Delete  {{name}}</button>
     </div>
   </section>
   {{/each}}
 </div>
+
+<script src="/javascript/deleteCharacter.js"></script>

@@ -39,7 +39,7 @@ router.get('/character', (req, res) => {
         include: [
             {
                 model: Character,
-                attributes: ['name', 'gold'],
+                attributes: ['id','name', 'gold', 'attack'],
             }
         ]
     })
