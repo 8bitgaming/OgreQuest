@@ -17,7 +17,7 @@ const addHealth = (event) => {
         submitUpgrade(newAttack, newGold, newHealth);
 
     }
-    // location.replace('/');
+    location.replace('/');
 
 }
 
@@ -33,7 +33,7 @@ const addAttack = (event) => {
         submitUpgrade(newAttack, newGold, newHealth);
 
     }
-    // location.replace('/');
+    location.replace('/');
 
 }
 
