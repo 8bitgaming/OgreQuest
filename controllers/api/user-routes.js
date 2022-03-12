@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Character } = require('../../models');
 
+
 //start of log in work
 //to create a user
 
