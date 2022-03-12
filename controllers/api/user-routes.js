@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Character } = require('../../models');
-
+const {mainEmail} = require('../../utils/email')
 
 //start of log in work
 //to create a user
@@ -19,7 +19,12 @@ router.post('/', (req, res) => {
 
                 res.json(dbUserData);
             });
-        }).catch((err) => {
+            mainEmail(dbUserData.email)
+
+        })
+
+        .catch((err) => {
+            
             console.log(err);
             res.status(400).json(err);
         });

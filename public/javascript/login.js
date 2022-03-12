@@ -1,4 +1,4 @@
-const { mainEmail } = require('./email');
+
 
 
 // sign up logic
@@ -21,7 +21,6 @@ async function signupFormHandler(event) {
         // check the response status
         if (response.ok) {
             console.log('success');
-            mainEmail();
         } else {
             alert(response.statusText);
         }
