@@ -16,6 +16,4 @@ const deleteCharacter = async (event) => {
     }
 }
 
-// document.querySelectorAll(".delete-character").addEventListener('click', deleteCharacter);
-
 document.querySelectorAll('.delete-character').forEach(e => e.addEventListener('click', deleteCharacter))
