@@ -1,6 +1,6 @@
 
-const goToBattle = () => {
-    console.log("battlepage with character", charId)
+const goToBattle = (event) => {
+    const charId = event.target.getAttribute('charId');
     location.replace(`/battlepage/${charId}`);
 }
 
