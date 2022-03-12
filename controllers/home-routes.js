@@ -53,6 +53,7 @@ router.get('/character', (req, res) => {
             const character = dbCharacterData.get({ plain: true });
 
             res.render('character', {
+                loggedIn: req.session.loggedIn,
                 character,
                 user_id: req.session.user_id
             });
@@ -84,6 +85,7 @@ router.get('/character/:id', (req, res) => {
             const character = dbCharacterData.get({ plain: true });
 
             res.render('upgrade', {
+                loggedIn: req.session.loggedIn,
                 character,
                 user_id: req.session.user_id
             });
@@ -117,6 +119,7 @@ router.get('/battlepage/:id', (req, res) => {
 
             const character = dbCharacterData.get({ plain: true });
             res.render('battlepage', {
+                loggedIn: req.session.loggedIn,
                 layout: 'battle',
                 character,
                 user_id: req.session.user_id
