@@ -62,7 +62,7 @@ router.get('/character', (req, res) => {
 router.get('/character/:id', (req, res) => {
     // a check will need to be included that user id matches characters users id so no others can access other characters
     // this will be added later
-    
+
     if (!req.session.loggedIn) {
         res.redirect('/');
         return;
@@ -124,6 +124,7 @@ router.get('/battlepage/:id', (req, res) => {
 
         })
     })
+
 
 
 
