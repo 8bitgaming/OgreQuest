@@ -4,11 +4,12 @@ async function characterFormHandler(event) {
     console.log('test');
 
     const character_name = document.querySelector('#character-name').value.trim();
-    const userID = document.querySelector('#character-name').getAttribute('user');
+    const userID = document.querySelector('#character-name').getAttribute('data-user');
     const goldValue = document.querySelector("input[name='difficulty']:checked").value
-   
+   console.log("this is user id >>>", userID);
 
     if(character_name){
+        console.log("This is the character name", character_name);
         switch (goldValue) {
             case 'easy':
                 var difficultValue = 50;
@@ -33,7 +34,8 @@ async function characterFormHandler(event) {
         });
     
         if (response.ok) {
-            document.location.reload();
+            // document.location.reload();
+            console.log("response is ok");
     
         } else {
             alert(response.statusText);

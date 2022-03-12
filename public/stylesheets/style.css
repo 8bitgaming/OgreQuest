@@ -96,7 +96,7 @@ header {
 margin: 5px;
 }
 
-.login-form {
+.loginform {
   background-image: url("/img/loginbanner.png");
   background-repeat: no-repeat;
   background-position: fixed;

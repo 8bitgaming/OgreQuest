@@ -2,3 +2,12 @@
         <span style="--i:1">OGRE</span>
         <span style="--i:2">QUEST</span>
         </div>
+
+    <nav>
+       {{#if loggedIn}}
+        <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+        <p>hello</p>
+        {{/if}}
+       {{!-- <button id="logout" class="btn-no-style">logout</button> --}}
+    </nav>

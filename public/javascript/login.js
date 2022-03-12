@@ -43,7 +43,8 @@ async function loginFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/character');
+            console.log("Session running", response.body);
+            // document.location.replace('/character');
         } else {
             alert(response.statusText);
         }

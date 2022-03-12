@@ -6,7 +6,7 @@ const { Character, User, Monsters } = require('../models');
 router.get('/', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/character');
-        return;
+        // return;
     }
     res.render('homepage', {
         userId: req.session.user_id,
@@ -44,17 +44,20 @@ router.get('/character', (req, res) => {
         ]
     })
         .then(dbCharacterData => {
-            if (!dbCharacterData) {
-                res.status(404).json({ message: 'No character found for this user - use the section below to create one' });
-                //or don't display this section at all if no characters found
-                return;
-            }
+            // if (!dbCharacterData) {
+            //     res.status(404).json({ message: 'No character found for this user - use the section below to create one' });
+            //     or don't display this section at all if no characters found
+            //     return;
+            // }
 
-            const character = dbCharacterData.get({ plain: true });
-
+            let character;
+            (dbCharacterData) ? character = dbCharacterData.get({ plain: true }) : character = false;
+            console.log("this is user_id >>>>", req.session);
             res.render('character', {
+                loggedIn: req.session.loggedIn,
                 character,
-                user_id: req.session.user_id
+                user_id: req.session.user_id,
+                
             });
         })
 });

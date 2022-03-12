@@ -4,6 +4,17 @@ const { Character } = require('../../models');
 
 //to create a character
 router.post('/', (req, res) => {
+    console.log("this is the request >>>>", req.body);
+    const user = async () => {
+       await User.findOne({
+            where: {
+                email: req.body.email
+            }
+        })
+        return data;
+    }
+    console.log("this is user >>>>", user);
+
     // expects {name: "Lernantino" user_id: "1"}
     Character.create({
         name: req.body.name,
@@ -15,6 +26,7 @@ router.post('/', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
+    
 });
 
 // Find all characters

@@ -11,6 +11,7 @@ router.post('/', (req, res) => {
         password: req.body.password
     })
         .then(dbUserData => {
+            console.log("this is dbUserData >>>>>", dbUserData);
             req.session.save(() => {
                 req.session.user_id = dbUserData.id;
                 req.session.email = dbUserData.email;
@@ -42,7 +43,7 @@ router.post('/login', (req, res) => {
             res.status(400).json({ message: 'Incorrect password!' });
             return;
         }
-
+        console.log("this is dbUserData", dbUserData.id);
         req.session.save(() => {
             // declare session variables
             req.session.user_id = dbUserData.id;
@@ -51,19 +52,26 @@ router.post('/login', (req, res) => {
 
             res.json({ user: dbUserData, message: 'You are now logged in!' });
         });
+        console.log("This is rec.session =>", req.session);
     });
 });
 
 router.post('/logout', (req, res) => {
+    console.log("You are in logout");
     if (req.session.loggedIn) {
+        console.log("Showing as logged in")
         req.session.destroy(() => {
             res.status(204).end();
         });
     }
     else {
-        res.status(404).end();
+        console.log("User was not logged in.");
+        res.status(418).end();
+        // res.send("You are not logged in.");
+        
     }
 })
+
 // Find all users
 router.get('/', (req, res) => {
     User.findAll({
