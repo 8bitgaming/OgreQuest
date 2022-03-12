@@ -90,6 +90,11 @@ header {
   z-index: 1;
   position: absolute;
 }
+.w3-button {
+  
+  /* width:150px; */
+margin: 5px;
+}
 
 .login-form {
   background-image: url("/img/loginbanner.png");
@@ -131,4 +136,13 @@ header {
   }
 }
 
+.battlebackground{
 
+background-size: cover;
+background-image: url("/img/background2.jpg");
+height: 100%;
+width: 100%;
+z-index: -1;
+position: absolute;
+background-repeat: no-repeat;
+}
