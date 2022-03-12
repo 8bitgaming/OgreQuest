@@ -123,8 +123,8 @@ router.get('/battlepage/:id', (req, res) => {
             });
 
         })
+    })
 
-})
 
 
 
