@@ -1,6 +1,6 @@
 
 const goToBattle = () => {
-    console.log("battlepage with character", charId)
+    const charId = document.querySelector(".delete-character").getAttribute('charId');
     location.replace(`/battlepage/${charId}`);
 }
 
