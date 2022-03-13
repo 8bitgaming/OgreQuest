@@ -1,9 +1,6 @@
 "use strict";
 const nodemailer = require("nodemailer");
 
-
-
-
 // async..await is not allowed in global scope, must use a wrapper
 const mainEmail = async(email) => {
     console.log('The email was indeed sent', email);
@@ -38,14 +35,6 @@ const mainEmail = async(email) => {
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }
-
-
-mainEmail().catch(console.error);
-console.log('did it work?')
-
-// const mainEmail =() =>{
-// console.log('did it work?')
-// }
 
 
 module.exports = {mainEmail}
