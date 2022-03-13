@@ -18,8 +18,8 @@
 
     <div class="w3-content">
         <div class="w3-display-container w3-blue w3-grayscale-max" style="height:100px;">
-            <div class="w3-display-middle w3-padding">
-                <h2>Battle Message/ Text</h2>
+            <div>
+                <h4 class="battle-message"></h4>
             </div>
         </div>
     </div>
@@ -29,4 +29,10 @@
         {{> upgrade }}
 
     </div>
+    <div>
+        <button class="w3-btn w3-border w3-round-xxlarge w3-red attack-button" data-charName="{{character.name}}" data-charId="{{character.id}}" data-attack="{{character.attack}}" data-health="{{character.hp}}">Attack</button>
+    </div>
 </div>
+
+<script src="/javascript/battle.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
