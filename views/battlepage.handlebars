@@ -1,11 +1,11 @@
-<div class="battlebackground">
+<div class="">
 
 
-    <div class="w3-pannel">
-        <h2>"Battle message"</h2>
+    {{!-- <div class="w3-pannel">
+        <h2>"Battle message"</h2> --}}
 
         <div class="w3-center"><br>
-            <img src="/img/ogre_image.jpg" alt="Avatar" style="width:30%, height: 30%" class="w3-circle w3-margin-top">
+            <img src="/img/ogre4.png" alt="Avatar" style="width:30%, height: 30%" class="">
             <p>Enemy name</p>
             <p>
                 <button class="w3-btn w3-border w3-xlarge w3-black">Health "10"</button>
@@ -18,34 +18,21 @@
 
     <div class="w3-content">
         <div class="w3-display-container w3-blue w3-grayscale-max" style="height:100px;">
-            <div class="w3-display-middle w3-padding">
-                <h2>Battle Message/ Text</h2>
+            <div>
+                <h4 class="battle-message"></h4>
             </div>
         </div>
     </div>
 
     <div class="w3-content">
 
-        <div class="w3-card w3-green" style="height: 350px">
-            <div class="w3-col m4 l3">
-                <button class="w3-button w3-xxlarge w3-black">Name</button>
-                <button class="w3-button w3-xxlarge w3-black">Attack</button>
-                <button class="w3-button w3-xxlarge w3-black">Defense</button>
-                <button class="w3-button w3-xxlarge w3-black">Luck</button>
-            </div>
-
-            <button class="w3-button w3-xxlarge w3-black">Gold/Score: </button>
-
-            <div class="w3-col m8 l9">
-                <button class="w3-button w3-xxlarge w3-black">+1 for 32g</button>
-            </div>
-            <div class="w3-col m8 l9">
-                <button class="w3-button w3-xxlarge w3-black">+1 for 8g</button>
-            </div>
-            <div class="w3-col m8 l9">
-                <button class="w3-button w3-xxlarge w3-black">+1 for 32g</button>
-            </div>
-        </div>
+        {{> upgrade }}
 
     </div>
+    <div>
+        <button class="w3-btn w3-border w3-round-xxlarge w3-red attack-button" data-charName="{{character.name}}" data-charId="{{character.id}}" data-attack="{{character.attack}}" data-health="{{character.hp}}">Attack</button>
+    </div>
 </div>
+
+<script src="/javascript/battle.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

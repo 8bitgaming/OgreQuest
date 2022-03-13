@@ -1,3 +1,6 @@
+
+
+
 // sign up logic
 
 async function signupFormHandler(event) {
@@ -17,10 +20,12 @@ async function signupFormHandler(event) {
         });
         // check the response status
         if (response.ok) {
+            document.location.replace('/character');
             console.log('success');
         } else {
             alert(response.statusText);
         }
+
     }
 }
 

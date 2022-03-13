@@ -1,0 +1,31 @@
+{{!-- Current character stats --}}
+<h2>Current Stats for {{character.name}}</h2>
+
+{{!-- upgrade stats --}}
+<div class="w3-card w3-green" style="height: 350px">
+    <form class="upgrade-form" user="{{character.id}}" name="{{character.name}}" health="{{character.hp}}"
+        attack="{{character.attack}}" gold="{{character.gold}}">
+        <div class="w3-col m4 l3">
+            <button class="w3-button w3-xxlarge w3-black">Name</button> {{character.name}}
+            <button class="w3-button w3-xxlarge w3-black">Health</button>{{character.hp}}
+            <button class="w3-button w3-xxlarge w3-black">Attack</button>{{character.attack}}
+            <button class="w3-button w3-xxlarge w3-black">Luck</button>
+        </div>
+
+        <button class="w3-button w3-xxlarge w3-black">Gold/Score: </button>
+        {{character.gold}}
+        <div class="w3-col m8 l9">
+            <button class="w3-button w3-xxlarge w3-black addHealth">+1 for 32g</button>
+
+        </div>
+        <div class="w3-col m8 l9">
+            <button class="w3-button w3-xxlarge w3-black addAttack">+1 for 8g</button>
+        </div>
+        <div class="w3-col m8 l9">
+            <button class="w3-button w3-xxlarge w3-black go to ">+1 for 32g</button>
+        </div>
+    </form>
+</div>
+
+
+<script src="/javascript/statUpgrade.js"></script>
