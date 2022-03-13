@@ -1,3 +1,6 @@
+
+
+
 // sign up logic
 
 async function signupFormHandler(event) {
@@ -21,6 +24,7 @@ async function signupFormHandler(event) {
         } else {
             alert(response.statusText);
         }
+
     }
 }
 

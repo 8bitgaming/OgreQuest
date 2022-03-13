@@ -112,6 +112,13 @@ margin: 5px;
   margin: 75% auto auto;
 }
 
+.battle-message {
+  overflow: auto;
+  max-height: 100px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
 .waviy {
   position: relative;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(40,185,65,.2));

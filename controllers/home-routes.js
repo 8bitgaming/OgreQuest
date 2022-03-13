@@ -53,6 +53,7 @@ router.get('/character', (req, res) => {
             const character = dbCharacterData.get({ plain: true });
 
             res.render('character', {
+                loggedIn: req.session.loggedIn,
                 character,
                 user_id: req.session.user_id
             });
@@ -62,7 +63,7 @@ router.get('/character', (req, res) => {
 router.get('/character/:id', (req, res) => {
     // a check will need to be included that user id matches characters users id so no others can access other characters
     // this will be added later
-    
+
     if (!req.session.loggedIn) {
         res.redirect('/');
         return;
@@ -84,6 +85,7 @@ router.get('/character/:id', (req, res) => {
             const character = dbCharacterData.get({ plain: true });
 
             res.render('upgrade', {
+                loggedIn: req.session.loggedIn,
                 character,
                 user_id: req.session.user_id
             });
@@ -92,9 +94,40 @@ router.get('/character/:id', (req, res) => {
 
 
 
-router.get('/battlepage', (req, res) => {
-    res.render('battlepage' , { layout: 'battle' });
-})
+router.get('/battlepage/:id', (req, res) => {
+
+    // a check will need to be included that user id matches characters users id so no others can access other characters
+    // this will be added later
+
+    if (!req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+
+    // finds one user
+    Character.findOne({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(dbCharacterData => {
+            if (!dbCharacterData) {
+                res.status(404).json({ message: 'No character found for this user ' });
+                //or don't display this section at all if no characters found
+                return;
+            }
+
+            const character = dbCharacterData.get({ plain: true });
+            res.render('battlepage', {
+                loggedIn: req.session.loggedIn,
+                layout: 'battle',
+                character,
+                user_id: req.session.user_id
+            });
+
+        })
+    })
+
 
 
 
