@@ -75,7 +75,7 @@ header {
   width: 100%;
   position: fixed;
 }
-.character-form {
+/* .character-form {
   background-image: url("/img/loginbanner.png");
   background-repeat: no-repeat;
   position: fixed;
@@ -84,7 +84,7 @@ header {
   width: 600px;
   height: 500px;
   text-align: center;
-}
+} */
 
 .get-characters {
   z-index: 1;
@@ -96,7 +96,7 @@ header {
 margin: 5px;
 }
 
-.login-form {
+.login-form, .character-form {
   background-image: url("/img/loginbanner.png");
   background-repeat: no-repeat;
   background-position: fixed;
@@ -111,6 +111,32 @@ margin: 5px;
   height: 475px;
   margin: 75% auto auto;
 }
+
+.characterform div{
+
+      overflow: hidden;
+
+  
+
+      float: left;
+      clear: none;
+    }
+    
+    label {
+      float: left;
+      clear: none;
+      display: block;
+      padding: 0px 1em 0px 8px;
+    }
+    
+    input[type=radio],
+    input.radio {
+      float: left;
+      clear: none;
+      margin: 2px 0 0 2px;
+    }
+
+
 
 .battle-message {
   overflow: auto;
