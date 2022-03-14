@@ -11,6 +11,10 @@
                 <button class="w3-btn w3-border w3-xlarge w3-black">Health "10"</button>
                 <button class="w3-btn w3-border w3-xlarge w3-black">Attack "10"</button>
                 <button class="w3-btn w3-border w3-xlarge w3-black">Defense "10"</button>
+                <div>
+                    <button class="w3-btn w3-border w3-round-xxlarge w3-red attack-button" data-charName="{{character.name}}"
+                        data-charId="{{character.id}}" data-attack="{{character.attack}}" data-health="{{character.hp}}">Attack</button>
+                </div>
             </p>
 
         </div>
@@ -27,11 +31,10 @@
     <div class="w3-content">
 
         {{> upgrade }}
+      
 
     </div>
-    <div>
-        <button class="w3-btn w3-border w3-round-xxlarge w3-red attack-button" data-charName="{{character.name}}" data-charId="{{character.id}}" data-attack="{{character.attack}}" data-health="{{character.hp}}">Attack</button>
-    </div>
+    
 </div>
 
 <script src="/javascript/battle.js"></script>

@@ -2,28 +2,28 @@
 <h2>Current Stats for {{character.name}}</h2>
 
 {{!-- upgrade stats --}}
-<div class="w3-card w3-green" style="height: 350px">
+<div class="w3-card s3 m4 l6  w3-green" style="height: 350px">
     <form class="upgrade-form" user="{{character.id}}" name="{{character.name}}" health="{{character.hp}}"
         attack="{{character.attack}}" gold="{{character.gold}}">
-        <div class="w3-col m4 l3">
-            <button class="w3-button w3-xxlarge w3-black">Name</button> {{character.name}}
-            <button class="w3-button w3-xxlarge w3-black">Health</button>{{character.hp}}
-            <button class="w3-button w3-xxlarge w3-black">Attack</button>{{character.attack}}
-            <button class="w3-button w3-xxlarge w3-black">Luck</button>
+        <div class="w3-col s3 m4 l6">
+            <button class="w3-button w3-xxlarge w3-black">{{character.name}}</button> 
+            <button class="w3-button w3-xxlarge w3-black">Health is {{character.hp}}</button>
+            <button class="w3-button w3-xxlarge w3-black">Attack level {{character.attack}}</button>
+            {{!-- <button class="w3-button w3-xxlarge w3-black">Luck</button> --}}
         </div>
 
-        <button class="w3-button w3-xxlarge w3-black">Gold/Score: </button>
-        {{character.gold}}
-        <div class="w3-col m8 l9">
-            <button class="w3-button w3-xxlarge w3-black addHealth">+1 for 32g</button>
+        <button class="w3-button w3-xxlarge w3-black">Gold/Score: {{character.gold}}</button>
+        
+        <div class="w3-col s54 m8 l9">
+            <button class="w3-button w3-xlarge w3-black addHealth">+1 for 32g</button>
 
         </div>
-        <div class="w3-col m8 l9">
-            <button class="w3-button w3-xxlarge w3-black addAttack">+1 for 8g</button>
+        <div class="w3-col s4 m8 l9">
+            <button class="w3-button w3-xlarge w3-black addAttack">+1 for 8g</button>
         </div>
-        <div class="w3-col m8 l9">
-            <button class="w3-button w3-xxlarge w3-black go to ">+1 for 32g</button>
-        </div>
+        {{!-- <div class="w3-col s4 m8 l9">
+            <button class="w3-button w3-xlarge w3-black go to ">+1 for 32g</button>
+        </div> --}}
     </form>
 </div>
 
