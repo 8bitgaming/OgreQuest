@@ -1,19 +1,44 @@
 let monster = {
     id: 1,
-    name: 'Shrogre',
-    hp: Math.floor(Math.random() * 10),
-    attack: Math.floor(Math.random() * 5),
-    gold: Math.floor(Math.random() * 5),
+    name: 'Ogrenator',
+    hp: Math.floor(Math.random() * 25 + 1),
+    attack: Math.floor(Math.random() * 25 + 1),
+    gold: Math.floor(Math.random() * 5 + 1),
 }
 
+const createMonster = () => {
+    let ogre = document.createElement("div")
+    ogre.classList.add("ogre", "w3-row-padding")
+    let ogreImg = document.createElement("img")
+    ogreImg.setAttribute("src", "/img/ogre4.png")
+    ogreImg.classList.add("w3-third")
 
+    let ogreName = document.createElement("h2")
+    ogreName.classList.add("w3-text-red", "w3-center", "w3-twothird")
+    ogreName.textContent = `${monster.name}`
+
+    let ogreHp = document.createElement("h4")
+    ogreHp.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-third")
+    ogreHp.textContent = `Health: ${monster.hp}`
+
+    let ogreAttack = document.createElement("h4")
+    ogreAttack.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-third")
+    ogreAttack.textContent = `Attack: ${monster.attack}`
+
+    let ogreGold = document.createElement("h4")
+    ogreGold.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-twothird")
+    ogreGold.textContent = `Reward: ${monster.attack}`
+
+    $(".monster-gold").text(`Reward: ${monster.gold} gold`)
+    $(".ogre-card").append(ogre)
+    $(".ogre").append(ogreImg, ogreName, ogreHp, ogreAttack, ogreGold)
+     return
+}
 
 const checkAttacker = (charAttack) => {
     return monster.attack >= charAttack ? true : false
 
 }
-
-// $(".battle-message").append(`The battle begins!<br/>`);
 
 const startBattle = (event) => {
     event.preventDefault();
@@ -23,6 +48,9 @@ const startBattle = (event) => {
         showButton(data);
     });
 
+    createMonster()
+
+    //Bring in character stats
     const charName = event.target.getAttribute('data-charName');
     const charId = event.target.getAttribute('data-charId');
     const charAttack = event.target.getAttribute('data-attack');
@@ -30,7 +58,7 @@ const startBattle = (event) => {
     let charGold = event.target.getAttribute('data-gold');
 
     //uses function to compare monster vs player attack value and set whoever has the higher attack as first
-    let monsterAttackFirst = checkAttacker(monster.attack, charAttack)
+    let monsterAttackFirst = checkAttacker(charAttack)
 
     // check character health before battle
     if (charHealth <= 0) {
@@ -39,12 +67,12 @@ const startBattle = (event) => {
     }
 
     //display welcome battle message in the log
-    $(".battle-message").append(`The battle begins!<br/>`);
+    $(".battle-message").append(`The ${monster.name} appears, ready to do battle!<br/>`);
 
     //iterate back and forth between attacks until the player or the monster is at zero. Math max prevents going below zero as it returns the larger number
     while (charHealth > 0 && monster.hp > 0) {
         monsterAttackFirst ? charHealth = Math.max(0, charHealth - monster.attack) : monster.hp = Math.max(0, monster.hp - charAttack)
-        monsterAttackFirst ? $(".battle-message").append(`Ogre hits ${charName} for ${monster.attack} damage. ${charName} has ${charHealth} health remaining!<br/>`) : $(".battle-message").append(`${charName} hits the Ogre for ${charAttack} damage. The Ogre has ${monster.hp} health remaining!<br/>`)
+        monsterAttackFirst ? $(".battle-message").append(`${monster.name} hits ${charName} for ${monster.attack} damage. ${charName} has ${charHealth} health remaining!<br/>`) : $(".battle-message").append(`${charName} hits the ${monster.name} for ${charAttack} damage. The ${monster.name} has ${monster.hp} health remaining!<br/>`)
         monsterAttackFirst = !monsterAttackFirst
         newHealth = charHealth
     }
@@ -96,7 +124,8 @@ const reloadPage = () => {
 }
 
 // function to return to character page
-const returnPage = () => {
+const returnPage = (event) => {
+    event.preventDefault();
     location.replace(`/character/`);
 }
 
