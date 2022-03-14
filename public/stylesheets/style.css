@@ -10,6 +10,11 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
+p{
+  color: red;
+  text-shadow: 2px 2px black;
+}
 button {
  
   border: black;
@@ -20,8 +25,11 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
-
-/* button:hover {
+#attack-button{
+font-size: 20px;
+float: right;
+}
+button:hover {
   background-color: #3486eb;
   
 } */
@@ -127,6 +135,7 @@ margin: 5px;
   display: flex;
   flex-wrap: wrap;
   flex-direction:row;
+  font-size:small;
 }
 
 .login-form, .character-form {

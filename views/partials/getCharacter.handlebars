@@ -4,7 +4,7 @@
   {{#each this.characters }}
   <section class="character">
     <div class="meta">
-      {{name}}:<br> {{gold}} gold <br> {{attack}} attack <br>
+      {{name}}:<br>{{hp}} health<br> {{gold}} gold <br> {{attack}} attack <br>
       <button class="delete-character" charId="{{id}}" userID="{{id}}">Delete  {{name}}</button><br>
       <button class="start-battle" charId="{{id}}" userID="{{id}}">Battle with {{name}}</button>
     </div>
@@ -13,4 +13,4 @@
 </div>
 
 <script src="/javascript/deleteCharacter.js"></script>
-<script src="/javascript/battle.js"></script>
+<script src="/javascript/goToBattlePage.js"></script>
