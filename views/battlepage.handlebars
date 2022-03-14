@@ -6,11 +6,15 @@
 
         <div class="w3-center"><br>
             <img src="/img/ogre4.png" alt="Avatar" style="width:30%, height: 30%" class="">
-            <p>Enemy name</p>
+            
+            <p class="w3-xxxlarge font-effect-shadow-multiple">The Ogrenator</p>
+                
+           
+            
             <p>
-                <button class="w3-btn w3-border w3-xlarge w3-black">Health "10"</button>
-                <button class="w3-btn w3-border w3-xlarge w3-black">Attack "10"</button>
-                <button class="w3-btn w3-border w3-xlarge w3-black">Defense "10"</button>
+                <button class="w3-btn w3-border w3-xlarge w3-black">Health 10</button>
+                <button class="w3-btn w3-border w3-xlarge w3-black">Attack 10</button>
+                <button class="w3-btn w3-border w3-xlarge w3-black">Defense 10</button>
             </p>
 
         </div>
@@ -29,6 +33,7 @@
         {{> upgrade }}
 
     </div>
+    {{!-- I put this functionality in upgrade handlebars page.  Functionality still works.  it is in both places --}}
     <div>
         <button class="w3-btn w3-border w3-round-xxlarge w3-red attack-button display-button"
             data-charName="{{character.name}}" data-charId="{{character.id}}" data-attack="{{character.attack}}"
