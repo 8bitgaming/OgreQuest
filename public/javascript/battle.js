@@ -1,16 +1,20 @@
+const randomNumber = Math.floor(Math.random() * monstersdata.length)
+
 let monster = {
     id: 1,
-    name: 'Ogrenator',
-    hp: Math.floor(Math.random() * 25 + 1),
-    attack: Math.floor(Math.random() * 25 + 1),
-    gold: Math.floor(Math.random() * 5 + 1),
+    name: monstersdata[randomNumber].name,
+    hp: monstersdata[randomNumber].hp,
+    attack: monstersdata[randomNumber].attack,
+    reward: monstersdata[randomNumber].reward,
+    img: monstersdata[randomNumber].img
 }
 
 const createMonster = () => {
+
     let ogre = document.createElement("div")
     ogre.classList.add("ogre", "w3-row-padding")
     let ogreImg = document.createElement("img")
-    ogreImg.setAttribute("src", "/img/ogre4.png")
+    ogreImg.setAttribute("src", monster.img)
     ogreImg.classList.add("w3-third")
 
     let ogreName = document.createElement("h2")
@@ -27,9 +31,9 @@ const createMonster = () => {
 
     let ogreGold = document.createElement("h4")
     ogreGold.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-twothird")
-    ogreGold.textContent = `Reward: ${monster.attack}`
+    ogreGold.textContent = `Reward: ${monster.reward}`
 
-    $(".monster-gold").text(`Reward: ${monster.gold} gold`)
+    $(".monster-gold").text(`Reward: ${monster.reward} gold`)
     $(".ogre-card").append(ogre)
     $(".ogre").append(ogreImg, ogreName, ogreHp, ogreAttack, ogreGold)
      return
@@ -77,8 +81,8 @@ const startBattle = (event) => {
         newHealth = charHealth
     }
     if (newHealth > 0) {
-        $(".battle-message").append(`${charName} is victorious in battle and collects ${monster.gold} gold!`);
-        newGold = parseInt(charGold) + monster.gold;
+        $(".battle-message").append(`${charName} is victorious in battle and collects ${monster.reward} gold!`);
+        newGold = parseInt(charGold) + monster.reward;
         saveChar(charId, newGold, newHealth);
     }
     else {
