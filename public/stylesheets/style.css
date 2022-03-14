@@ -12,7 +12,7 @@ body {
 }
 button {
   background-color: #225ca3;
-  border: 0;
+  border: black;
   padding: 10px;
   color: white;
   font-weight: bold;
@@ -21,10 +21,10 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
+/* button:hover {
   background-color: #3486eb;
   
-}
+} */
 
 
 textarea, input {
@@ -87,13 +87,41 @@ header {
 } */
 
 .get-characters {
-  z-index: 1;
+  /* z-index: 1; */
   position: absolute;
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+    margin: 1px 10px;
+    text-transform: capitalize;
 }
 .w3-button {
   
   /* width:150px; */
 margin: 5px;
+}
+.charactercont {
+  background-image: url("/img/charactersimg.png");
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  height: 400px;
+  display:flex;
+  flex-direction:row;
+  /* flex-wrap: wrap; */
+  
+}
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
 }
 
 .login-form, .character-form {
@@ -112,37 +140,88 @@ margin: 5px;
   margin: 75% auto auto;
 }
 
-.characterform h1 {
+.characterform h1{
 
-  color:black;
-  text-shadow: 4px 4px 0px #ffffff;
-  mix-blend-mode: screen;
-  animation: fadeIn 2s linear forwards;
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+}
+.characterform p {
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+
+}
+.characterform button {
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+    background-color:#3ca3227a;
+    border-color: black;
 }
 
-@keyframes fadeIn {
-    0%{
-        opacity: 5;
-    }
-
-    100% {
-        opacity: 100;
-    }
+.characterform label {
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
 }
+header button {
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+    background-color:#3ca3227a;
+    border-color: black;
+}
+
 .difficultyradio {
   overflow: hidden;
   float: left;
-  clear: none;
 }
 .difficultyradio p {
   color: rgb(0, 0, 0);
   text-shadow: 5px 5px 10px rgb(56, 51, 51);
   font-size: large;
+  clear: none;
 }
 
 .difficultylabel {
   float: left;
-  clear: none;
+  
   display: block;
   padding: 0px 1em 0px 8px;
 }
