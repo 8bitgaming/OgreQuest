@@ -11,7 +11,7 @@ body {
   background-size: cover;
 }
 button {
-  background-color: #225ca3;
+ 
   border: black;
   padding: 10px;
   color: white;
@@ -115,8 +115,13 @@ margin: 5px;
   height: 400px;
   display:flex;
   flex-direction:row;
+  flex-wrap:wrap;
   /* flex-wrap: wrap; */
   
+}
+.creatediv {
+  display:flex;
+  flex-wrap:wrap;
 }
 .meta {
   display: flex;
@@ -180,6 +185,23 @@ margin: 5px;
     background-color:#3ca3227a;
     border-color: black;
 }
+.character button {
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+    background-color:#3ca3227a;
+    border-color: black;
+    height: 20%;
+    margin: 5px;
+    
+}
 
 .characterform label {
   color: #fff;
@@ -206,6 +228,8 @@ header button {
     0 0 150px rgb(23, 201, 47);
     background-color:#3ca3227a;
     border-color: black;
+    border: black;
+    border-width: 1px;
 }
 
 .difficultyradio {
