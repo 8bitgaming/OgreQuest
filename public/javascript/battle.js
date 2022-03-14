@@ -26,6 +26,12 @@ const startBattle = (event) => {
     //uses function to compare monster vs player attack value and set whoever has the higher attack as first
     let monsterAttackFirst = checkAttacker(monsterAttack, charAttack)
 
+    // check character health before battle
+    if (charHealth <= 0) {
+        $(".battle-message").append(`Character has 0 hp! You need to add health or select new character<br/>`);
+        return;
+    }
+
     //display welcome battle message in the log
     $(".battle-message").append(`The battle begins!<br/>`);
 
@@ -48,9 +54,9 @@ const startBattle = (event) => {
 
     }
     //to do - display final message and gold award and update db or go back to character screen
-    // document.location.reload();
 }
 
+// saves to db
 const saveChar = (charId, newGold, newHealth) => {
     const response = fetch('/api/characters/' + parseInt(charId), {
         method: 'PUT',
@@ -64,11 +70,12 @@ const saveChar = (charId, newGold, newHealth) => {
         }
     });
     if (response.ok) {
-        document.location.reload();
+        reloadPage();
 
     }
 }
 
+// toggles button display
 function showButton(x) {
     // var x = document.querySelectorAll(".display-button");
     if (x.style.display === "none") {
@@ -78,5 +85,17 @@ function showButton(x) {
     }
 }
 
+// function to reload page
+const reloadPage = () => {
+    document.location.reload();
+}
+
+// function to return to character page
+const returnPage = () => {
+    location.replace(`/character/`);
+}
+
 
 document.querySelector('.attack-button').addEventListener('click', startBattle);
+document.querySelector('.continue-button').addEventListener('click', reloadPage);
+document.querySelector('.return-button').addEventListener('click', returnPage);
