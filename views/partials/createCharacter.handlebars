@@ -1,23 +1,25 @@
 
 <div class="character-form">
+    
 <form class="characterform">
+    <h1>Create Your Character</h1>
     <div>
-        <label for="character-name">Enter Character name:</label>
-        <input type="text" id="character-name" user="{{user_id}}" />
+        {{!-- <label for="character-name">Enter Character name:</label> --}}
+        <input type="text" id="character-name" placeholder="Enter Character Name" user="{{user_id}}" />
     </div>
-    <div>
+    <div class="difficultyradio">
         <p>Please select your difficulty:</p>
-          <label for="easy">Easy</label>
+          <label for="easy" class="difficultylabel">Easy</label>
           <input type="radio" id="easy" name="difficulty" value="easy" checked>
         {{!-- <br> --}}
-          <label for="medium">Medium</label>
+          <label for="medium" class="difficultylabel">Medium</label>
           <input type="radio" id="medium" name="difficulty" value="medium">
         {{!-- <br> --}}
-          <label for="hard">Hard</label>
+          <label for="hard" class="difficultylabel">Hard</label>
           <input type="radio" id="hard" name="difficulty" value="hard">
         <br>
     </div>
-    <div>
+    <div class="CrChButton">
         <button type="submit">Create Character</button>
     </div>
 </form>
