@@ -11,21 +11,21 @@ const mainEmail = async(email) => {
 
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
+        host: 'smtp.gmail.com',
         port: 587,
         auth: {
-            user: 'brennan.haley71@ethereal.email',
-            pass: '5Rwa8TBtjFpXhu7tK1'
+            user: 'ogrequestgame@gmail.com',
+            pass: 'password1234!'
         }
     });
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: '"Fred Foo 👻" <brennan.haley71@ethereal.email>', // sender address
+        from: '"OgreQuest Admin 👻" <ogrequestgame@gmail.com>', // sender address
         to: `${email}`, // list of receivers
         subject: "Welcome to OgreQuest ✔", // Subject line
-        text: "Hello world?", // plain text body
-        html: "<b>Hello world?</b>", // html body
+        text: "Welcome to OgreQuest!", // plain text body
+        html: "<b>Welcome to OgreQuest!</b>", // html body
     });
 
     console.log("Message sent: %s", info.messageId);
