@@ -1,7 +1,3 @@
-{{!-- Current character stats --}}
-<h2>Current Stats
-    {{!-- for {{character.name}} --}}
-</h2>
 
 {{!-- upgrade stats --}}
 <div class="w3-card s3 m4 l6  w3-lime" style="height: 350px">
@@ -20,7 +16,7 @@
         <div class="w3-container">
             <span class="w3-tag w3-xxlarge w3-border w3-xxlarge w3-blue-grey w3-margin">Health is:
                 {{character.hp}}
-                    <button class="w3-button w3-large w3-amber w3-topbar w3-bottombar w3-leftbar w3-rightbar display-button ">+1 </button>
+                    <button class="w3-button w3-large w3-amber w3-topbar w3-bottombar w3-leftbar w3-rightbar display-button addHealth ">+1 </button>
                     </span>
 
 {{!-- this is the functionality that was/ is in battle handlebars page 
@@ -35,8 +31,6 @@ functionality still works  --}}
                         data-charName="{{character.name}}" data-charId="{{character.id}}" data-attack="{{character.attack}}"
                         data-health="{{character.hp}}" data-gold="{{character.gold}}">Return to Character Page</button>
 
-
-
                     <button class="w3-btn w3-border w3-round-xxlarge w3-red continue-button display-button" id="attack-button" style="display:none;"
                         data-charName="{{character.name}}" data-charId="{{character.id}}" data-attack="{{character.attack}}"
                         data-health="{{character.hp}}" data-gold="{{character.gold}}">Continue Fighting</button>
@@ -44,7 +38,7 @@ functionality still works  --}}
         <div class="w3-container">
             <span class="w3-tag w3-xxlarge w3-border w3-xxlarge w3-blue-grey w3-margin">Attack level:
                 {{character.attack}}
-            <button class="w3-button w3-large w3-amber w3-topbar w3-bottombar w3-leftbar w3-rightbar display-button">+1 </button>
+            <button class="w3-button w3-large w3-amber w3-topbar w3-bottombar w3-leftbar w3-rightbar display-button addAttack">+1 </button>
             </span>
 
    
