@@ -43,7 +43,8 @@ async function characterFormHandler(event) {
         // console.log(user_id);
     }
     else { 
-        console.log("A character name is needed")
+        document.getElementById('errorMessage').style.display = 'block';
+        document.getElementById('errorText').textContent = 'A character name is needed';
     }
 }
 
