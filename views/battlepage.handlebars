@@ -1,20 +1,26 @@
 <div class="">
 
+<div class="ogre-card">
+</div>
 
     {{!-- <div class="w3-pannel">
         <h2>"Battle message"</h2> --}}
 
-        <div class="w3-center"><br>
+        {{!-- <div class="w3-center"><br>
             <img src="/img/ogre4.png" alt="Avatar" style="width:30%, height: 30%" class="">
-            <p>Enemy name</p>
+            
+            <p class="w3-xxxlarge font-effect-shadow-multiple">The Ogrenator</p>
+                
+           
+            
             <p>
-                <button class="w3-btn w3-border w3-xlarge w3-black">Health "10"</button>
-                <button class="w3-btn w3-border w3-xlarge w3-black">Attack "10"</button>
-                <button class="w3-btn w3-border w3-xlarge w3-black">Defense "10"</button>
+                <div class="w3-border w3-xlarge w3-black"><h3 class="monster-health w3-text-white"></h3></div>
+                <button class="w3-btn w3-border w3-xlarge w3-black monster-attack"></button>
+                <button class="w3-btn w3-border w3-xlarge w3-black monster-gold"></button>
             </p>
 
         </div>
-    </div>
+    </div> --}}
 
     <div class="w3-content">
         <div class="w3-display-container w3-blue w3-grayscale-max" style="height:100px;">
@@ -27,17 +33,6 @@
     <div class="w3-content">
 
         {{> upgrade }}
-
-    </div>
-    <div>
-        <button class="w3-btn w3-border w3-round-xxlarge w3-red attack-button display-button"
-            data-charName="{{character.name}}" data-charId="{{character.id}}" data-attack="{{character.attack}}"
-            data-health="{{character.hp}}" data-gold="{{character.gold}}">Attack</button>
-        <button class="w3-btn w3-border w3-round-xxlarge w3-red return-button display-button" style="display:none;"
-            data-userId="{{character.user_id}}">Return to Character Page</button>
-        <button class="w3-btn w3-border w3-round-xxlarge w3-red continue-button display-button" style="display:none;"
-            data-charName="{{character.name}}" data-charId="{{character.id}}" data-attack="{{character.attack}}"
-            data-health="{{character.hp}}" data-gold="{{character.gold}}">Continue Fighting</button>
 
     </div>
 </div>

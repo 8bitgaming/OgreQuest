@@ -1,10 +1,10 @@
 <div class="get-characters w3-container">
-    <h3>{{email}} created characters:</h3>
+    <h3>{{email}} characters:</h3>
     
   {{#each this.characters }}
   <section class="character">
     <div class="meta">
-      {{name}} with {{gold}} gold and {{attack}} attack
+      {{name}} has {{hp}} health, {{gold}} gold and {{attack}} attack
       <button class="delete-character" charId="{{id}}">Delete  {{name}}</button>
       <button class="start-battle" charId="{{id}}">Battle with {{name}}</button>
     </div>

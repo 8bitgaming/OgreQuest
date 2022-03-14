@@ -1,8 +1,44 @@
-const checkAttacker = (monsterAttack, charAttack) => {
-    return monsterAttack >= charAttack ? true : false
-
+let monster = {
+    id: 1,
+    name: 'Ogrenator',
+    hp: Math.floor(Math.random() * 25 + 1),
+    attack: Math.floor(Math.random() * 25 + 1),
+    gold: Math.floor(Math.random() * 5 + 1),
 }
 
+const createMonster = () => {
+    let ogre = document.createElement("div")
+    ogre.classList.add("ogre", "w3-row-padding")
+    let ogreImg = document.createElement("img")
+    ogreImg.setAttribute("src", "/img/ogre4.png")
+    ogreImg.classList.add("w3-third")
+
+    let ogreName = document.createElement("h2")
+    ogreName.classList.add("w3-text-red", "w3-center", "w3-twothird")
+    ogreName.textContent = `${monster.name}`
+
+    let ogreHp = document.createElement("h4")
+    ogreHp.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-third")
+    ogreHp.textContent = `Health: ${monster.hp}`
+
+    let ogreAttack = document.createElement("h4")
+    ogreAttack.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-third")
+    ogreAttack.textContent = `Attack: ${monster.attack}`
+
+    let ogreGold = document.createElement("h4")
+    ogreGold.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-twothird")
+    ogreGold.textContent = `Reward: ${monster.attack}`
+
+    $(".monster-gold").text(`Reward: ${monster.gold} gold`)
+    $(".ogre-card").append(ogre)
+    $(".ogre").append(ogreImg, ogreName, ogreHp, ogreAttack, ogreGold)
+     return
+}
+
+const checkAttacker = (charAttack) => {
+    return monster.attack >= charAttack ? true : false
+
+}
 
 const startBattle = (event) => {
     event.preventDefault();
@@ -12,19 +48,17 @@ const startBattle = (event) => {
         showButton(data);
     });
 
+    createMonster()
 
+    //Bring in character stats
     const charName = event.target.getAttribute('data-charName');
     const charId = event.target.getAttribute('data-charId');
     const charAttack = event.target.getAttribute('data-attack');
     let charHealth = event.target.getAttribute('data-health');
     let charGold = event.target.getAttribute('data-gold');
 
-    const monsterId = 1
-    const monsterAttack = 5
-    let monsterHealth = 25
-    let monstergold = 50
     //uses function to compare monster vs player attack value and set whoever has the higher attack as first
-    let monsterAttackFirst = checkAttacker(monsterAttack, charAttack)
+    let monsterAttackFirst = checkAttacker(charAttack)
 
     // check character health before battle
     if (charHealth <= 0) {
@@ -33,27 +67,26 @@ const startBattle = (event) => {
     }
 
     //display welcome battle message in the log
-    $(".battle-message").append(`The battle begins!<br/>`);
+    $(".battle-message").append(`The ${monster.name} appears, ready to do battle!<br/>`);
 
     //iterate back and forth between attacks until the player or the monster is at zero. Math max prevents going below zero as it returns the larger number
-    while (charHealth > 0 && monsterHealth > 0) {
-        monsterAttackFirst ? charHealth = Math.max(0, charHealth - monsterAttack) : monsterHealth = Math.max(0, monsterHealth - charAttack)
-        monsterAttackFirst ? $(".battle-message").append(`Ogre hits ${charName} for ${monsterAttack} damage. ${charName} has ${charHealth} health remaining!<br/>`) : $(".battle-message").append(`${charName} hits the Ogre for ${charAttack} damage. The Ogre has ${monsterHealth} health remaining!<br/>`)
+    while (charHealth > 0 && monster.hp > 0) {
+        monsterAttackFirst ? charHealth = Math.max(0, charHealth - monster.attack) : monster.hp = Math.max(0, monster.hp - charAttack)
+        monsterAttackFirst ? $(".battle-message").append(`${monster.name} hits ${charName} for ${monster.attack} damage. ${charName} has ${charHealth} health remaining!<br/>`) : $(".battle-message").append(`${charName} hits the ${monster.name} for ${charAttack} damage. The ${monster.name} has ${monster.hp} health remaining!<br/>`)
         monsterAttackFirst = !monsterAttackFirst
         newHealth = charHealth
     }
     if (newHealth > 0) {
-        console.log("congrat on winning the battle you won 20 gold");
-        newGold = parseInt(charGold) + 20;
+        $(".battle-message").append(`${charName} is victorious in battle and collects ${monster.gold} gold!`);
+        newGold = parseInt(charGold) + monster.gold;
         saveChar(charId, newGold, newHealth);
     }
     else {
-        console.log("Better Luck next time");
+        $(".battle-message").append(`${charName} suffered an embarrassing defeat and will need to heal before continuing in battle.`);
         newGold = parseInt(charGold);
         saveChar(charId, newGold, newHealth);
 
     }
-    //to do - display final message and gold award and update db or go back to character screen
 }
 
 // saves to db
@@ -91,7 +124,8 @@ const reloadPage = () => {
 }
 
 // function to return to character page
-const returnPage = () => {
+const returnPage = (event) => {
+    event.preventDefault();
     location.replace(`/character/`);
 }
 
