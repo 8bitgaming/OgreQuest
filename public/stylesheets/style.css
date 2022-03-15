@@ -10,6 +10,12 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
+.w3-text-red{
+  color: red;
+  text-shadow: 2px 2px black;
+  font-size: 50px;
+}
 button {
   background-color: #225ca3;
   border: 0;
@@ -20,7 +26,10 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
-
+#attack-button{
+font-size: 20px;
+float: right;
+}
 button:hover {
   background-color: #3486eb;
   
@@ -139,10 +148,14 @@ margin: 5px;
 
 
 .battle-message {
-  overflow: auto;
-  max-height: 100px;
+  overflow: scroll;
+  max-height: 300px;
   padding-left: 10px;
   padding-top: 5px;
+  width: 653px;
+  background-color: lightgray;
+  box-shadow: black;
+
 }
 
 .waviy {

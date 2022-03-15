@@ -1,30 +1,53 @@
-{{!-- Current character stats --}}
-<h2>Current Stats for {{character.name}}</h2>
 
 {{!-- upgrade stats --}}
-<div class="w3-card w3-green" style="height: 350px">
+<div class="w3-card w3-lime w3-twothird">
     <form class="upgrade-form" user="{{character.id}}" name="{{character.name}}" health="{{character.hp}}"
         attack="{{character.attack}}" gold="{{character.gold}}">
-        <div class="w3-col m4 l3">
-            <button class="w3-button w3-xxlarge w3-black">Name</button> {{character.name}}
-            <button class="w3-button w3-xxlarge w3-black">Health</button>{{character.hp}}
-            <button class="w3-button w3-xxlarge w3-black">Attack</button>{{character.attack}}
-            <button class="w3-button w3-xxlarge w3-black">Luck</button>
-        </div>
 
-        <button class="w3-button w3-xxlarge w3-black">Gold/Score: </button>
-        {{character.gold}}
-        <div class="w3-col m8 l9">
-            <button class="w3-button w3-xxlarge w3-black addHealth">+1 for 32g</button>
+
+        <div class="w3-bar w3-xxlarge  w3-border w3-round-xxlarge w3-blue-grey w3-center w3-margin-top" id="character-name">{{character.name}}</div>
+
+        <div class="w3-container w3-center">
+            <span class="w3-tag w3-xxlarge w3-margin-top w3-indigo w3-topbar w3-bottombar w3-leftbar w3-rightbar">Gold/Score: {{character.gold}}</span>
 
         </div>
-        <div class="w3-col m8 l9">
-            <button class="w3-button w3-xxlarge w3-black addAttack">+1 for 8g</button>
+
+        
+        <div class="w3-container">
+            <span class="w3-tag w3-xxlarge w3-border w3-xxlarge w3-blue-grey w3-margin">Health is:
+                {{character.hp}}
+                    <button class="w3-button w3-large w3-amber w3-topbar w3-bottombar w3-leftbar w3-rightbar display-button addHealth ">+10 </button>
+                    </span>
+
+{{!-- this is the functionality that was/ is in battle handlebars page 
+functionality still works  --}}
+
+                    <button class="w3-btn w3-border w3-round-xxlarge w3-red attack-button display-button" id="attack-button" data-charName="{{character.name}}"
+
+                        data-charId="{{character.id}}" data-attack="{{character.attack}}" data-health="{{character.hp}}"
+                        data-gold="{{character.gold}}">Attack</button>
+
+                    <button class="w3-btn w3-border w3-round-xxlarge w3-red return-button display-button" id="attack-button" style="display:none;"
+                        data-charName="{{character.name}}" data-charId="{{character.id}}" data-attack="{{character.attack}}"
+                        data-health="{{character.hp}}" data-gold="{{character.gold}}">Return to Character Page</button>
+
+                    <button class="w3-btn w3-border w3-round-xxlarge w3-red continue-button display-button" id="attack-button" style="display:none;"
+                        data-charName="{{character.name}}" data-charId="{{character.id}}" data-attack="{{character.attack}}"
+                        data-health="{{character.hp}}" data-gold="{{character.gold}}">Continue Fighting</button>
         </div>
-        <div class="w3-col m8 l9">
-            <button class="w3-button w3-xxlarge w3-black go to ">+1 for 32g</button>
-        </div>
-    </form>
+        <div class="w3-container">
+            <span class="w3-tag w3-xxlarge w3-border w3-xxlarge w3-blue-grey w3-margin">Attack level:
+                {{character.attack}}
+            <button class="w3-button w3-large w3-amber w3-topbar w3-bottombar w3-leftbar w3-rightbar display-button addAttack">+10 </button>
+            </span>
+
+   
+
+</div>
+</div>
+
+
+</form>
 </div>
 
 
