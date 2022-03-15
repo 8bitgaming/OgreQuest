@@ -25,15 +25,15 @@ const createMonster = () => {
     ogreName.textContent = `${monster.name}`
 
     let ogreHp = document.createElement("h4")
-    ogreHp.classList.add("w3-border", "w3-xlarge", "w3-black")
+    ogreHp.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-third")
     ogreHp.textContent = `Health: ${monster.hp}`
 
     let ogreAttack = document.createElement("h4")
-    ogreAttack.classList.add("w3-border", "w3-xlarge", "w3-black")
+    ogreAttack.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-third")
     ogreAttack.textContent = `Attack: ${monster.attack}`
 
     let ogreGold = document.createElement("h4")
-    ogreGold.classList.add("w3-border", "w3-xlarge", "w3-black")
+    ogreGold.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-third")
     ogreGold.textContent = `Reward: ${monster.reward}`
 
     $(".monster-gold").text(`Reward: ${monster.reward} gold`)
