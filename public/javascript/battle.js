@@ -18,7 +18,7 @@ const createMonster = () => {
     ogre.classList.add("ogre", "w3-row-padding")
     let ogreImg = document.createElement("img")
     ogreImg.setAttribute("src", monster.img)
-    ogreImg.classList.add("w3-twothird")
+    // ogreImg.classList.add("w3-twothird")
 
     let ogreName = document.createElement("h2")
     ogreName.classList.add("w3-text-red", "w3-center")
