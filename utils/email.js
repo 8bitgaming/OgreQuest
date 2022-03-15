@@ -1,31 +1,27 @@
 "use strict";
 const nodemailer = require("nodemailer");
 
+
 // async..await is not allowed in global scope, must use a wrapper
 const mainEmail = async(email) => {
-    console.log('The email was indeed sent', email);
-
-    // Generate test SMTP service account from ethereal.email
-    // Only needed if you don't have a real mail account for testing
-    let testAccount = await nodemailer.createTestAccount();
 
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
+        host: 'smtp.gmail.com',
         port: 587,
         auth: {
-            user: 'brennan.haley71@ethereal.email',
-            pass: '5Rwa8TBtjFpXhu7tK1'
+            user: 'ogrequestgame@gmail.com',
+            pass: process.env.EMAILER_PW
         }
     });
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: '"Fred Foo 👻" <brennan.haley71@ethereal.email>', // sender address
+        from: '"OgreQuest Admin 👻" <ogrequestgame@gmail.com>', // sender address
         to: `${email}`, // list of receivers
         subject: "Welcome to OgreQuest ✔", // Subject line
-        text: "Hello world?", // plain text body
-        html: "<b>Hello world?</b>", // html body
+        text: "Welcome to OgreQuest!", // plain text body
+        html: "<b>Welcome to OgreQuest!</b>", // html body
     });
 
     console.log("Message sent: %s", info.messageId);

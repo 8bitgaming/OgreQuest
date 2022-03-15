@@ -17,9 +17,10 @@ body {
   margin:0;
 }
 
-p{
+.w3-text-red{
   color: red;
   text-shadow: 2px 2px black;
+  font-size: 50px;
 }
 button {
  
@@ -347,10 +348,14 @@ margin: 5px;
 
 
 .battle-message {
-  overflow: auto;
-  max-height: 100px;
+  overflow: scroll;
+  max-height: 300px;
   padding-left: 10px;
   padding-top: 5px;
+  width: 653px;
+  background-color: lightgray;
+  box-shadow: black;
+
 }
 
 .waviy {
