@@ -1,13 +1,16 @@
-const randomNumber = Math.floor(Math.random() * monstersdata.length)
+const randomMonster = Math.floor(Math.random() * monstersdata.length)
 
 let monster = {
     id: 1,
-    name: monstersdata[randomNumber].name,
-    hp: monstersdata[randomNumber].hp,
-    attack: monstersdata[randomNumber].attack,
-    reward: monstersdata[randomNumber].reward,
-    img: monstersdata[randomNumber].img
+    name: monstersdata[randomMonster].name,
+    hp: monstersdata[randomMonster].hp,
+    attack: monstersdata[randomMonster].attack,
+    reward: monstersdata[randomMonster].reward,
+    img: monstersdata[randomMonster].img
 }
+
+let fightingWords = ['hits', 'attacks', 'bashes', 'crushes', 'slices', 'charges and smashes', 'casts fireball at', 'mashes']
+
 
 const createMonster = () => {
 
@@ -15,7 +18,7 @@ const createMonster = () => {
     ogre.classList.add("ogre", "w3-row-padding")
     let ogreImg = document.createElement("img")
     ogreImg.setAttribute("src", monster.img)
-    ogreImg.classList.add("w3-third")
+    ogreImg.classList.add("w3-quarter")
 
     let ogreName = document.createElement("h2")
     ogreName.classList.add("w3-text-red", "w3-center", "w3-twothird")
@@ -76,7 +79,9 @@ const startBattle = (event) => {
     //iterate back and forth between attacks until the player or the monster is at zero. Math max prevents going below zero as it returns the larger number
     while (charHealth > 0 && monster.hp > 0) {
         monsterAttackFirst ? charHealth = Math.max(0, charHealth - monster.attack) : monster.hp = Math.max(0, monster.hp - charAttack)
-        monsterAttackFirst ? $(".battle-message").append(`${monster.name} hits ${charName} for ${monster.attack} damage. ${charName} has ${charHealth} health remaining!<br/>`) : $(".battle-message").append(`${charName} hits the ${monster.name} for ${charAttack} damage. The ${monster.name} has ${monster.hp} health remaining!<br/>`)
+        const randomFightWord = Math.floor(Math.random() * fightingWords.length)
+        monsterAttackFirst ? $(".battle-message").append(`${monster.name} ${fightingWords[randomFightWord]} ${charName} for ${monster.attack} damage. ${charName} has ${charHealth} health remaining!<br/>`) : $(".battle-message").append(`${charName} ${fightingWords[randomFightWord]} the ${monster.name} for ${charAttack} damage. The ${monster.name} has ${monster.hp} health remaining!<br/>`)
+        $(".battle-message").append(`***************************************************<br/>`)
         monsterAttackFirst = !monsterAttackFirst
         newHealth = charHealth
     }
