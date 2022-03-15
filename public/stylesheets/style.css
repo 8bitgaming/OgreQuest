@@ -9,6 +9,12 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+  margin:0;
 }
 
 .w3-text-red{
@@ -17,23 +23,51 @@ body {
   font-size: 50px;
 }
 button {
-  background-color: #225ca3;
-  border: 0;
-  padding: 10px;
-  color: white;
-  font-weight: bold;
-  transition: background-color .1s;
-  cursor: pointer;
-  border-radius: 5px;
+ 
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+    background-color:#3ca3227a;
+    border-color: black;
+    height: 20%;
+    margin: 5px;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.mainpage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 250px;
+}
+
 #attack-button{
 font-size: 20px;
 float: right;
 }
-button:hover {
+/* button:hover {
   background-color: #3486eb;
   
-}
+}  */
 
 
 textarea, input {
@@ -96,16 +130,47 @@ header {
 } */
 
 .get-characters {
-  z-index: 1;
-  position: absolute;
+  /* z-index: 1; */
+ 
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+    margin: 1px 10px;
+    text-transform: capitalize;
 }
 .w3-button {
   
   /* width:150px; */
 margin: 5px;
 }
+.charactercont {
+  background-image: url("/img/charactersimg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 
-.login-form, .character-form {
+  /* flex-wrap: wrap; */
+  
+}
+.creatediv {
+  display:flex;
+  flex-wrap:wrap;
+}
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  font-size:small;
+}
+
+.login-form {
   background-image: url("/img/loginbanner.png");
   background-repeat: no-repeat;
   background-position: fixed;
@@ -117,8 +182,143 @@ margin: 5px;
   /* top: 50%;
   right: 25%; */
   width: 600px;
-  height: 475px;
+  height: 450px;
   margin: 75% auto auto;
+}
+.character-form {
+  background-image: url("/img/loginbanner.png");
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* .login-form button {
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+    background-color:#3ca3227a;
+    border-color: black;
+} */
+
+.characterform h1{
+
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+}
+.characterform p {
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+
+}
+/* .characterform button {
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+    background-color:#3ca3227a;
+    border-color: black;
+} */
+/* .character button {
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+    background-color:#3ca3227a;
+    border-color: black;
+    height: 20%;
+    margin: 5px;
+    
+} */
+
+.characterform label {
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+}
+/* header button {
+  color: #fff;
+  text-shadow:
+    0 0 5px black,
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px rgb(23, 201, 47),
+    0 0 80px rgb(23, 201, 47),
+    0 0 90px rgb(23, 201, 47),
+    0 0 100px rgb(23, 201, 47),
+    0 0 150px rgb(23, 201, 47);
+    background-color:#3ca3227a;
+    border-color: black;
+    border: black;
+    border-width: 1px;
+} */
+
+.difficultyradio {
+  overflow: hidden;
+  float: left;
+}
+.difficultyradio p {
+  color: rgb(0, 0, 0);
+  text-shadow: 5px 5px 10px rgb(56, 51, 51);
+  font-size: large;
+  clear: none;
+}
+
+.difficultylabel {
+  float: left;
+  
+  display: block;
+  padding: 0px 1em 0px 8px;
+}
+.CrChButton {
+  margin: 0%;
+  left:50%;
 }
 
 /* .characterform div{
@@ -182,6 +382,10 @@ margin: 5px;
   }
 }
 
+@keyframes shadowmove {
+  20% {text-shadow: 10x 1}
+}
+
 .battlebackground{
 
 background-size: cover;
@@ -195,36 +399,16 @@ background-repeat: no-repeat;
 
 
 
-/*Nothing below these*/
 
-    /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 
-    @media screen and (max-width: 1224px) {
+    @media only screen and (max-width: 600px) {
       body{
 background-image: url("/img/goblincave.jpg");
       }
       
-      /* header {
-        padding-bottom: 0; justify-content: center; position: relative; }
-    
-      header h1 {width: 100%;text-align: center;}
-    
-
-header nav ul {margin-top: 20px; width: 100%; justify-content: center;}
-      
-header nav ul li a {font-size: 20px;}
-footer h2, footer div {text-align: center; width: 100%;}
-
-.hero-cta, .hero-form {width: 100%;}
-
-.hero-cta {text-align: center;}
-
-.section-title {width: 80%;}
-.trainer {flex: 0 70%;}
-
-.contact-info iframe {flex: 1 100%;} */
-      } 
-@media screen and (min-width: 768px) {
+  
+} 
+      @media only screen and (min-width: 600px) {
 
    body{
 background-image: url("/img/goblincave.jpg");
@@ -235,7 +419,7 @@ background-image: url("/img/goblincave.jpg");
   } */
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
    body{
 background-image: url("/img/goblincave.jpg");
       }
@@ -267,7 +451,7 @@ background-image: url("/img/goblincave.jpg");
 
 }
 
-@media screen and (max-width: 575px) {
+@media only screen and (min-width: 992px) {
    body{
 background-image: url("/img/goblincave.jpg");
       }
@@ -297,4 +481,9 @@ background-image: url("/img/goblincave.jpg");
   .contact-form {
     order: 3;
   } */
+}
+@media only screen and (min-width: 1200px) {
+  body{
+    background-image: url("/img/goblincave.jpg");
+          }
 }

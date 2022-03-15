@@ -1,23 +1,27 @@
 
-<div class="character-form">
+<div class="character-form w3-container">
+    
 <form class="characterform">
+    <h1>Create Your Character</h1>
     <div>
-        <label for="character-name">Enter Character name:</label>
-        <input type="text" id="character-name" user="{{user_id}}" />
+        {{!-- <label for="character-name">Enter Character name:</label> --}}
+        <input type="text" id="character-name" placeholder="Enter Character Name" user="{{user_id}}" />
     </div>
     <div>
         <p>Please select your difficulty:</p>
-          <label for="easy">Easy</label>
-          <input type="radio" id="easy" name="difficulty" value="easy" checked>
+        <div>
+          <label for="easy" class="difficultylabel">Easy</label>
+          <input type="radio" id="easy" class="difficultyradio" name="difficulty" value="easy" checked>
+        
+          <label for="medium" class="difficultylabel">Medium</label>
+          <input type="radio" id="medium" class="difficultyradio" name="difficulty" value="medium">
         {{!-- <br> --}}
-          <label for="medium">Medium</label>
-          <input type="radio" id="medium" name="difficulty" value="medium">
-        {{!-- <br> --}}
-          <label for="hard">Hard</label>
-          <input type="radio" id="hard" name="difficulty" value="hard">
+          <label for="hard" class="difficultylabel">Hard</label>
+          <input type="radio" id="hard" class="difficultyradio" name="difficulty" value="hard">
         <br>
+        </div>
     </div>
-    <div>
+    <div class="CrChButton">
         <button type="submit">Create Character</button>
     </div>
 </form>
