@@ -18,22 +18,22 @@ const createMonster = () => {
     ogre.classList.add("ogre", "w3-row-padding")
     let ogreImg = document.createElement("img")
     ogreImg.setAttribute("src", monster.img)
-    ogreImg.classList.add("w3-quarter")
+    ogreImg.classList.add("w3-twothird")
 
     let ogreName = document.createElement("h2")
-    ogreName.classList.add("w3-text-red", "w3-center", "w3-twothird")
+    ogreName.classList.add("w3-text-red", "w3-center")
     ogreName.textContent = `${monster.name}`
 
     let ogreHp = document.createElement("h4")
-    ogreHp.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-third")
+    ogreHp.classList.add("w3-border", "w3-xlarge", "w3-black")
     ogreHp.textContent = `Health: ${monster.hp}`
 
     let ogreAttack = document.createElement("h4")
-    ogreAttack.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-third")
+    ogreAttack.classList.add("w3-border", "w3-xlarge", "w3-black")
     ogreAttack.textContent = `Attack: ${monster.attack}`
 
     let ogreGold = document.createElement("h4")
-    ogreGold.classList.add("w3-border", "w3-xlarge", "w3-black", "w3-twothird")
+    ogreGold.classList.add("w3-border", "w3-xlarge", "w3-black")
     ogreGold.textContent = `Reward: ${monster.reward}`
 
     $(".monster-gold").text(`Reward: ${monster.reward} gold`)
