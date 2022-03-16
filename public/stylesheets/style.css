@@ -468,6 +468,12 @@ header {
     margin: 0 auto;
   }
 
+  main {
+    width: 320px;
+    padding: 0;
+    padding-left: 10px;
+  }
+
 }
 
 @media only screen and (min-width: 600px) {

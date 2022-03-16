@@ -81,7 +81,7 @@ const startBattle = (event) => {
         monsterAttackFirst ? charHealth = Math.max(0, charHealth - monster.attack) : monster.hp = Math.max(0, monster.hp - charAttack)
         const randomFightWord = Math.floor(Math.random() * fightingWords.length)
         monsterAttackFirst ? $(".battle-message").append(`${monster.name} ${fightingWords[randomFightWord]} ${charName} for ${monster.attack} damage. ${charName} has ${charHealth} health remaining!<br/>`) : $(".battle-message").append(`${charName} ${fightingWords[randomFightWord]} the ${monster.name} for ${charAttack} damage. The ${monster.name} has ${monster.hp} health remaining!<br/>`)
-        $(".battle-message").append(`***************************************************<br/>`)
+        $(".battle-message").append(`**************************<br/>`)
         monsterAttackFirst = !monsterAttackFirst
         newHealth = charHealth
     }

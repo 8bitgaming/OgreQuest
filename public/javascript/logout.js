@@ -13,7 +13,3 @@ async function logout() {
 
 document.querySelector('#logout').addEventListener('click', logout);
 
-// closes modal when called upon in multiple pages
-document.getElementById('errorMessage').onclick = function closeModal() {
-    document.getElementById('errorMessage').style.display = 'none';
-}
