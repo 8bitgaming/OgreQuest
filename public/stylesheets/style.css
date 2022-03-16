@@ -477,7 +477,7 @@ header {
   .character-form {
     background-image: none;
     background: linear-gradient(to bottom right, rgb(95, 236, 114), rgb(59, 55, 55));
-    width: 100%;
+    width: 300px;
     height: 50%;
     /* background-position: fixed; */
     /* object-fit: contain; */
@@ -487,8 +487,11 @@ header {
   .charactercont {
     background-image: none;
     background: linear-gradient(to top right, rgb(95, 236, 114), rgb(59, 55, 55));
-    width: 278px;
+    width: 300px;
     height: 50%;
+    /* font-size:small;
+    flex-wrap: wrap; */
+   /* contain: content; */
     /* background-position: fixed; */
     /* object-fit: contain; */
     /* background-size: contain; */
@@ -511,8 +514,19 @@ header {
   .get-characters {
     margin: 0 0 0 0;
     overflow: hidden;
+    word-break: break-all;
+    hyphens: auto;
   }
-  
+  .login-form {
+    background-image: none;
+    background: linear-gradient(to bottom right, rgb(95, 236, 114), rgb(59, 55, 55));
+    width: 100%;
+    height: 50%;
+  }
+  .w3-margin-left {
+    margin: 0 0 0 0 !important;
+
+  }
 
 }
 
