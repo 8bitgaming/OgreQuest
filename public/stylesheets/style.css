@@ -473,6 +473,46 @@ header {
     padding: 0;
     padding-left: 10px;
   }
+  
+  .character-form {
+    background-image: none;
+    background: linear-gradient(to bottom right, rgb(95, 236, 114), rgb(59, 55, 55));
+    width: 100%;
+    height: 50%;
+    /* background-position: fixed; */
+    /* object-fit: contain; */
+    /* background-size: contain; */
+    /* font-size: 10px; */
+  }
+  .charactercont {
+    background-image: none;
+    background: linear-gradient(to top right, rgb(95, 236, 114), rgb(59, 55, 55));
+    width: 278px;
+    height: 50%;
+    /* background-position: fixed; */
+    /* object-fit: contain; */
+    /* background-size: contain; */
+    /* align-items: center;
+    overflow: hidden;
+    clear: both;
+    */
+  }
+
+  .delete-character {
+    float: right;
+    flex-wrap: nowrap;
+  }
+  .start-battle {
+    float: right;
+    position:unset;
+    width: 150%;
+    
+  }
+  .get-characters {
+    margin: 0 0 0 0;
+    overflow: hidden;
+  }
+  
 
 }
 
