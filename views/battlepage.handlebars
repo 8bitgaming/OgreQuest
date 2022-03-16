@@ -1,19 +1,24 @@
-<div class="ogre-card w3-third" style="">
+<div class="battle-class">
+    <div class="ogre-card w3-half"></div>
 
-</div>
+    <div class="w3-half battle-option">
 
-    <div class="w3-twothird">
-        {{!-- <div class="w3-blue w3-grayscale-max w3-twothird" style="height:150px;"> --}}
+        <div class="w3-content">
+            <div>
+            {{!-- <div class="w3-blue w3-grayscale-max w3-twothird" style="height:150px;"> --}}
                 <h4 class="battle-message"></h4>
+
+            </div>
+
+            <div class="w3-content">
+
+                {{> upgrade }}
+
+            </div>
+
         </div>
     </div>
-
-    <div class="w3-content">
-
-        {{> upgrade }}
-
-    </div>
-
+</div>
 <script src="/javascript/monstersData.js"></script>
 <script src="/javascript/battle.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
