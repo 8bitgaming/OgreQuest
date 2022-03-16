@@ -5,7 +5,7 @@
 }
 
 body {
-  
+
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -14,16 +14,17 @@ body {
   flex-wrap: wrap;
   align-content: space-around;
   align-items: center;
-  margin:0;
+  margin: 0;
 }
 
-.w3-text-red{
+.w3-text-red {
   color: red;
   text-shadow: 2px 2px black;
   font-size: 50px;
 }
+
 button {
- 
+
   color: #fff;
   text-shadow:
     0 0 5px black,
@@ -34,15 +35,17 @@ button {
     0 0 90px rgb(23, 201, 47),
     0 0 100px rgb(23, 201, 47),
     0 0 150px rgb(23, 201, 47);
-    background-color:#3ca3227a;
-    border-color: black;
-    height: 20%;
-    margin: 5px;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+  background-color: #3ca3227a;
+  border-color: black;
+  height: 20%;
+  margin: 5px;
+  border-radius: 15px;
+  box-shadow: 0 4px #999;
 }
 
-button:hover {background-color: #3e8e41}
+button:hover {
+  background-color: #3e8e41
+}
 
 button:active {
   background-color: #3e8e41;
@@ -54,21 +57,40 @@ button:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   padding-top: 250px;
 }
 
-#attack-button{
-font-size: 20px;
-float: right;
+.display-button {
+  font-size: 20px;
+  float: right;
 }
+
 /* button:hover {
   background-color: #3486eb;
   
 }  */
+.ogre-card {
+  /* contain: style; */
+  object-fit: contain;
+  /* overflow: auto; */
+}
 
+.battle-option {
+  /* contain: style; */
+  object-fit: contain;
+}
+
+.status-bar {
+  width: 100%;
+}
+
+.battle-class {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 textarea, input {
   padding: .5%;
@@ -90,11 +112,11 @@ form label {
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 33%;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33%;
+  width: 100%;
 }
 
 .loginimg {
@@ -106,18 +128,21 @@ header {
   /* position: fixed; */
   align-content: center;
 }
+
 .titleimg {
-  width:100%;
+  width: 100%;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
 }
+
 .headerimg {
   width: 100%;
   position: fixed;
 }
+
 /* .character-form {
   background-image: url("/img/loginbanner.png");
   background-repeat: no-repeat;
@@ -131,7 +156,7 @@ header {
 
 .get-characters {
   /* z-index: 1; */
- 
+
   color: #fff;
   text-shadow:
     0 0 5px black,
@@ -142,32 +167,36 @@ header {
     0 0 90px rgb(23, 201, 47),
     0 0 100px rgb(23, 201, 47),
     0 0 150px rgb(23, 201, 47);
-    margin: 1px 10px;
-    text-transform: capitalize;
+  margin: 1px 10px;
+  text-transform: capitalize;
 }
+
 .w3-button {
-  
+
   /* width:150px; */
-margin: 5px;
+  margin: 5px;
 }
+
 .charactercont {
   background-image: url("/img/charactersimg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  
+
 
   /* flex-wrap: wrap; */
-  
+
 }
+
 .creatediv {
-  display:flex;
-  flex-wrap:wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
+
 .meta {
   display: flex;
   flex-wrap: wrap;
-  flex-direction:row;
-  font-size:small;
+  flex-direction: row;
+  font-size: small;
 }
 
 .login-form {
@@ -185,6 +214,7 @@ margin: 5px;
   height: 450px;
   margin: 75% auto auto;
 }
+
 .character-form {
   background-image: url("/img/loginbanner.png");
   background-repeat: no-repeat;
@@ -212,7 +242,7 @@ margin: 5px;
     border-color: black;
 } */
 
-.characterform h1{
+.characterform h1 {
 
   color: #fff;
   text-shadow:
@@ -225,6 +255,7 @@ margin: 5px;
     0 0 100px rgb(23, 201, 47),
     0 0 150px rgb(23, 201, 47);
 }
+
 .characterform p {
   color: #fff;
   text-shadow:
@@ -238,6 +269,7 @@ margin: 5px;
     0 0 150px rgb(23, 201, 47);
 
 }
+
 /* .characterform button {
   color: #fff;
   text-shadow:
@@ -282,6 +314,7 @@ margin: 5px;
     0 0 100px rgb(23, 201, 47),
     0 0 150px rgb(23, 201, 47);
 }
+
 /* header button {
   color: #fff;
   text-shadow:
@@ -303,6 +336,7 @@ margin: 5px;
   overflow: hidden;
   float: left;
 }
+
 .difficultyradio p {
   color: rgb(0, 0, 0);
   text-shadow: 5px 5px 10px rgb(56, 51, 51);
@@ -312,13 +346,14 @@ margin: 5px;
 
 .difficultylabel {
   float: left;
-  
+
   display: block;
   padding: 0px 1em 0px 8px;
 }
+
 .CrChButton {
   margin: 0%;
-  left:50%;
+  left: 50%;
 }
 
 /* .characterform div{
@@ -352,7 +387,7 @@ margin: 5px;
   max-height: 300px;
   padding-left: 10px;
   padding-top: 5px;
-  width: 653px;
+  /* width: 653rem; */
   background-color: lightgray;
   box-shadow: black;
 
@@ -360,9 +395,10 @@ margin: 5px;
 
 .waviy {
   position: relative;
-  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(40,185,65,.2));
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(40, 185, 65, .2));
   font-size: 100px;
 }
+
 .waviy span {
   font-family: 'Alfa Slab One', cursive;
   position: relative;
@@ -371,48 +407,74 @@ margin: 5px;
   text-transform: uppercase;
   animation: waviy 1s infinite;
   animation-delay: calc(.1s * var(--i));
-  
+
 }
+
 @keyframes waviy {
-  0%,40%,100% {
+  0%, 40%, 100% {
     transform: translateY(0)
   }
+
   20% {
     transform: translateY(-20px)
   }
 }
 
 @keyframes shadowmove {
-  20% {text-shadow: 10x 1}
+  20% {
+    text-shadow: 10x 1
+  }
 }
 
-.battlebackground{
+.battlebackground {
 
-background-size: cover;
-background-image: url("/img/background2.jpg");
-height: 100%;
-width: 100%;
-z-index: -1;
-position: absolute;
-background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/img/background2.jpg");
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  background-repeat: no-repeat;
 }
 
 
 
 
 
-    @media only screen and (max-width: 600px) {
-      body{
-background-image: url("/img/goblincave.jpg");
-      }
-      
-  
-} 
-      @media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url("/img/goblincave.jpg");
+  }
 
-   body{
-background-image: url("/img/goblincave.jpg");
-      }
+  .battle-class {
+    width: 320px;
+    padding: 0;
+    padding-left: 10px;
+
+  }
+
+  header {
+    width: 320px;
+    padding: 0;
+    padding-left: 10px;
+  }
+
+  .waviy {
+    font-size: 50px;
+  }
+
+  img {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+  body {
+    background-image: url("/img/goblincave.jpg");
+  }
 
   /* section {
     padding: 30px 15px;
@@ -420,9 +482,10 @@ background-image: url("/img/goblincave.jpg");
 }
 
 @media only screen and (min-width: 768px) {
-   body{
-background-image: url("/img/goblincave.jpg");
-      }
+  body {
+    background-image: url("/img/goblincave.jpg");
+  }
+
   /* section {
     padding: 30px 15px;
   }
@@ -452,9 +515,10 @@ background-image: url("/img/goblincave.jpg");
 }
 
 @media only screen and (min-width: 992px) {
-   body{
-background-image: url("/img/goblincave.jpg");
-      }
+  body {
+    background-image: url("/img/goblincave.jpg");
+  }
+
   /* .hero-form button {
     width: 100%;
   }
@@ -482,8 +546,9 @@ background-image: url("/img/goblincave.jpg");
     order: 3;
   } */
 }
+
 @media only screen and (min-width: 1200px) {
-  body{
+  body {
     background-image: url("/img/goblincave.jpg");
-          }
+  }
 }
