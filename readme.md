@@ -4,6 +4,8 @@
 
 ## Description
 Defeat the monsters and win the gold to make the  characters you create stronger and more powerful.
+![screenshot of OgreQuest](./public/img/OgreQuest.PNG?raw=true)
+
 
 ## Table of Contents
 * [Installation instructions ](#Installation-instructions)
